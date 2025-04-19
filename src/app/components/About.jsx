@@ -30,9 +30,8 @@ export default function AboutSection() {
               We drive meaningful change, through locally tailored interventions that adapt to evolving needs. By utilizing cutting-edge gerontological research with grassroots activism, we bridge the gap between policy and practice, ensuring that every voice - from Nobel laureates to street vendors - contributes to redefining aging in India.
             </p>
             <Button
-              asChild
               size="lg"
-              className="bg-[#5e6f46] hover:bg-[#ecc54f] text-white text-lg font-bold py-6 px-8"
+              className="bg-[#5e6f46] hover:bg-[#ecc54f] text-white hover:text-black text-lg font-bold py-6 px-8"
             >
               <Link href="/about">Learn More About Us</Link>
             </Button>
