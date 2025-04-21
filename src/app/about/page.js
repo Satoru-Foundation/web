@@ -132,7 +132,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button asChild size="lg" className="bg-[#5e6f46] hover:bg-[#5e6f46]/90">
-              <a href="/volunteer" className="text-[#5e6f46] hover:underline">Volunteer With Us</a>
+              <a href="https://forms.gle/JXMZWr6euHobNas9A" className="text-[#5e6f46] hover:underline">Volunteer With Us</a>
             </Button>
             <Button
               asChild
@@ -140,7 +140,7 @@ export default function AboutPage() {
               variant="outline"
               className="border-[#5e6f46] text-black hover:bg-[#5e6f46]/10"
             >
-              <a href="/donate" className="text-[#5e6f46] hover:underline">Support Our Work</a>
+              <a href="https://rzp.io/rzp/rAIotl7h" className="text-[#5e6f46] hover:underline">Support Our Work</a>
             </Button>
           </div>
         </div>

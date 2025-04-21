@@ -99,7 +99,7 @@ const GetInvolved = () => {
                   <br />
                 <div className="flex gap-4">
                   <Link href={job.viewLink}>
-                    <Button variant="outline">View Description</Button>
+                    <Button className="bg-[#ecc54f] hover:bg-[#eab308] text-black">View Description</Button>
                   </Link>
                   <Link href={job.applyLink}>
                     <Button className="bg-[#5e6f46] hover:bg-[#5e6f46]/90 text-white">Apply Now</Button>

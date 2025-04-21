@@ -79,7 +79,7 @@ export default function Navbar() {
           </Link>
           <div>
     <Link
-      href="/donate"
+      href="https://rzp.io/rzp/rAIotl7h"
       className="text-[#5e6f46] bg-[#ecc54f] text-xl font-extrabold px-8 py-4 rounded-lg
              border-2 border-[#ecc54f]
              transition-all duration-300 ease-in-out
@@ -126,7 +126,7 @@ export default function Navbar() {
               Projects
             </Link>
             <Link
-              href="/donate"
+              href="https://rzp.io/rzp/rAIotl7h"
               className="text-[#5e6f46] hover:text-[#ecc54f] font-bold text-xl"
               onClick={() => setIsMenuOpen(false)}
             >

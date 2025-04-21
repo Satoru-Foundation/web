@@ -17,7 +17,7 @@ export default function Footer() {
             <p className="text-white mb-6">
               “The main mission of the Satoru Foundation is to improve quality of life, overall health, and well-being among the marginalised communities in India”.
             </p>
-            <Link href="/donate" className="inline-block bg-[#ecc54f] text-[#1e2b26] font-semibold px-5 py-2 rounded-md hover:bg-yellow-400 transition-colors">
+            <Link href="https://rzp.io/rzp/rAIotl7h" className="inline-block bg-[#ecc54f] text-[#1e2b26] font-semibold px-5 py-2 rounded-md hover:bg-yellow-400 transition-colors">
             DONATE NOW
             </Link>
           </div>

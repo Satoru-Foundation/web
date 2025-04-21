@@ -90,13 +90,13 @@ export default function ProjectsPage() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button size="lg" className="bg-[#5e6f46] hover:bg-[#5e6f46]/90 text-white font-bold">
-              <Link href="/donate">Support Our Work</Link>
+              <Link href="https://rzp.io/rzp/rAIotl7h">Support Our Work</Link>
             </Button>
             <Button
               size="lg"
               className="bg-[#5e6f46] hover:bg-[#5e6f46]/90 text-white font-bold"
             >
-              <Link href="/volunteer">Volunteer</Link>
+              <Link href="https://forms.gle/JXMZWr6euHobNas9A">Volunteer</Link>
             </Button>
           </div>
         </div>
