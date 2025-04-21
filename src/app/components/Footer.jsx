@@ -25,7 +25,7 @@ export default function Footer() {
           {/* Links */}
           <div className="flex flex-col items-center">
             <h3 className="text-lg font-bold mb-1">Links</h3>
-            <div className="w-13 h-1 bg-[#ecc54f] mb-4 rounded"></div>
+            <div className="w-55 h-1 bg-[#ecc54f] mb-4 rounded"></div>
             <div className="flex gap-12">
               <ul className="space-y-3 text-white text-center">
                 <li><Link href="/" className="hover:text-[#ecc54f]">Home</Link></li>

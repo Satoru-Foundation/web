@@ -5,7 +5,7 @@ import Image from "next/image"
 import { Button } from "../components/ui/button"
 
 export default function ProjectsPage() {
-  const programs = [
+  const projects = [
     {
       id: "Madavi",
       title: "Madavi:Multi-Temporal and Dimensional Ageing Views in India",
@@ -21,7 +21,7 @@ export default function ProjectsPage() {
       image: "/projects/gaman.jpg",
     },
     {
-      id: "Active India",
+      id: "ActiveIndia",
       title: "Active India: Advancing cognitive and physical health through technology-driven intervention for vibrant elderly.",
       description:
         "The project's goal is to improve cognitive function, physical health, and well-being, addressing ageism and reducing health disparities of Indian elderly people through technology-based interventions.",
@@ -53,20 +53,20 @@ export default function ProjectsPage() {
           </div>
 
           <div className="space-y-20">
-            {programs.map((program, index) => (
+            {projects.map((projects, index) => (
               <div
-                key={program.id}
+                key={projects.id}
                 className={`grid md:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
               >
                 <div className={index % 2 === 1 ? "md:order-2" : ""}>
-                  <h2 className="text-3xl font-bold mb-6 text-[#5e6f46]">{program.title}</h2>
-                  <p className="text-lg text-gray-600 mb-6">{program.description}</p>
+                  <h2 className="text-3xl font-bold mb-6 text-[#5e6f46]">{projects.title}</h2>
+                  <p className="text-lg text-gray-600 mb-6">{projects.description}</p>
                   <p className="text-lg text-gray-600 mb-8">
-                    Through our {program.title.toLowerCase()} program, we've been able to impact thousands of lives and
+                    Through our {projects.title.toLowerCase()} projects, we've been able to impact thousands of lives and
                     create lasting positive change for older adults across India.
                   </p>
                   <Button size="lg" className="bg-[#5e6f46] hover:bg-[#5e6f46]/90 text-white">
-                    <Link href={`/programs/${program.id}`}>Learn More</Link>
+                    <Link href={`/projects/${projects.id}`}>Learn More</Link>
                   </Button>
                 </div>
                 <div
@@ -74,7 +74,7 @@ export default function ProjectsPage() {
                     index % 2 === 1 ? "md:order-1" : ""
                   }`}
                 >
-                  <Image src={program.image || "/placeholder.svg"} alt={program.title} fill className="object-cover" />
+                  <Image src={projects.image || "/placeholder.svg"} alt={projects.title} fill className="object-cover" />
                 </div>
               </div>
             ))}
@@ -86,7 +86,7 @@ export default function ProjectsPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 text-[#5e6f46]">Get Involved</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-            There are many ways you can support our programs and help us make a difference in the lives of older people.
+            There are many ways you can support our projects and help us make a difference in the lives of older people.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button size="lg" className="bg-[#5e6f46] hover:bg-[#5e6f46]/90 text-white font-bold">

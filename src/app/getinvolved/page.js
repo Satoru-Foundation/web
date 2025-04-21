@@ -64,15 +64,6 @@ const jobOpenings = [
     viewLink: "/getinvolved/visualmedia_internship.pdf",
     applyLink: "https://forms.gle/Fssmm6hkyRVCE63GA",
   },
-  {
-    title: "Administrative Assistant",
-    description:
-      "Administrative Assistant",
-    location:"Hyderabad,Telangana",
-    deadline:"20th April 2025",
-    viewLink: "/getinvolved/admin_job.pdf",
-    applyLink: "https://forms.gle/WP94GGzMHftPbLik8",
-  },
 ];
 
 const GetInvolved = () => {
