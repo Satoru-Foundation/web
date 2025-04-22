@@ -32,8 +32,7 @@ export default function ContactPage() {
             <div>
               <h3 className="text-xl font-bold mb-2 text-gray-800">How is my donation used?</h3>
               <p className="text-gray-600">
-                Your donation directly supports our educational programs, community development initiatives, and
-                humanitarian aid efforts. We ensure that the majority of funds go directly to our programs.
+              Your contribution supports our research-driven initiatives, grassroots community development, and humanitarian outreach. We ensure that your support creates direct and lasting impact where it's needed most.
               </p>
             </div>
             <div>

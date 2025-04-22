@@ -18,27 +18,30 @@ const aboutImages = [
 
 export default function AboutSection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-10 sm:py-16 lg:py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <div className="order-2 lg:order-1">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-8 text-[#5e6f46]">About Satoru Foundation</h2>
-            <p className="text-xl text-black mb-6 leading-relaxed">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-6 sm:mb-8 text-[#5e6f46]">
+              About Satoru Foundation
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-black mb-4 sm:mb-6 leading-relaxed">
               The generation that once built our nation now faces isolation, neglect, and systematic indifference. At Satoru Foundation, we are driven by the belief that aging is not a burden but a profound journey - one that deserves dignity, care and purpose.
             </p>
-            <p className="text-xl text-black mb-10 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-black mb-6 sm:mb-10 leading-relaxed">
               We drive meaningful change, through locally tailored interventions that adapt to evolving needs. By utilizing cutting-edge gerontological research with grassroots activism, we bridge the gap between policy and practice, ensuring that every voice - from Nobel laureates to street vendors - contributes to redefining aging in India.
             </p>
             <Button
               size="lg"
-              className="bg-[#5e6f46] hover:bg-[#ecc54f] text-white hover:text-black text-lg font-bold py-6 px-8"
+              className="bg-[#5e6f46] hover:bg-[#ecc54f] text-white hover:text-black text-lg font-bold py-4 sm:py-6 px-6 sm:px-8"
             >
               <Link href="/about">Learn More About Us</Link>
             </Button>
           </div>
+
           <div className="order-1 lg:order-2 relative">
             {/* Slideshow Container */}
-            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl">
+            <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[500px] rounded-2xl overflow-hidden shadow-xl">
               <Swiper
                 modules={[Autoplay, Pagination]}
                 autoplay={{
@@ -68,19 +71,20 @@ export default function AboutSection() {
                 ))}
               </Swiper>
             </div>
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 rounded-full z-10 border-4 border-white bg-white p-1 overflow-hidden">
-            <div className="relative w-full h-full">
-              <Image
-                src="/about/circle-image-.png"
-                alt="Our mission"
-                width={104}
-                height={104}
-                className="object-scale-down" // Ensures full image visibility
-                quality={100}
-              />
+
+            {/* Circular Image */}
+            <div className="absolute -bottom-8 sm:-bottom-6 -left-8 sm:left-0 w-24 sm:w-32 h-24 sm:h-32 rounded-full z-10 border-4 border-white bg-white p-1 overflow-hidden">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/about/circle-image-.png"
+                  alt="Our mission"
+                  width={104}
+                  height={104}
+                  className="object-scale-down"
+                  quality={100}
+                />
+              </div>
             </div>
-            </div>
-            {/* <div className="absolute -top-6 -right-6 w-24 h-24 bg-[#5e6f46] rounded-full z-10"></div> */}
           </div>
         </div>
       </div>

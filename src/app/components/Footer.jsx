@@ -32,7 +32,6 @@ export default function Footer() {
                 <li><Link href="/about" className="hover:text-[#ecc54f]">About us</Link></li>
                 <li><Link href="/ourwork" className="hover:text-[#ecc54f]">Our Work</Link></li>
                 <li><Link href="/projects" className="hover:text-[#ecc54f]">Projects</Link></li>
-                <li><Link href="/activities" className="hover:text-[#ecc54f]">Activities</Link></li>
               </ul>
               <ul className="space-y-3 text-white text-center">
                 <li><Link href="/meenestham" className="hover:text-[#ecc54f]">MeeNestham</Link></li>

@@ -30,7 +30,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative bg-[#5e6f46]/10 overflow-hidden h-[90vh] min-h-[500px] max-h-[1000px]">
+    <section className="relative overflow-hidden h-[90vh] min-h-[500px] max-h-[1000px]">
       {/* Background Slider */}
       <div className="absolute inset-0 z-0">
         {swiperReady && (
@@ -52,17 +52,18 @@ export default function HeroSection() {
           >
             {backgroundImages.map((src, index) => (
               <SwiperSlide key={index}>
-                <div className="absolute inset-0 bg-black/30">
+                <div className="absolute inset-0">
                   <Image
                     src={src}
                     alt=""
                     fill
                     priority={index === 0}
                     quality={90}
-                    className="object-cover"
+                    className="object-cover brightness-50"
                     sizes="100vw"
                     style={{ objectPosition: "center center" }}
                   />
+                  <div className="absolute inset-0 bg-black/40" />
                 </div>
               </SwiperSlide>
             ))}
@@ -73,39 +74,34 @@ export default function HeroSection() {
       {/* Navigation Arrows */}
       <button
         ref={prevRef}
-        className="z-20 absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-md hover:bg-white/30 text-white border border-white/30 p-2 sm:p-3 rounded-full transition-all duration-300 shadow-lg"
+        className="z-20 absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/30 text-white border border-white/30 p-2 sm:p-3 rounded-full transition-all duration-300 shadow-lg"
       >
         <ChevronLeft className="w-5 h-5 sm:w-7 sm:h-7" />
       </button>
       <button
         ref={nextRef}
-        className="z-20 absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-md hover:bg-white/30 text-white border border-white/30 p-2 sm:p-3 rounded-full transition-all duration-300 shadow-lg"
+        className="z-20 absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/30 text-white border border-white/30 p-2 sm:p-3 rounded-full transition-all duration-300 shadow-lg"
       >
         <ChevronRight className="w-5 h-5 sm:w-7 sm:h-7" />
       </button>
 
-      {/* Content */}
+      {/* Text Content */}
       <div className="container mx-auto px-4 sm:px-6 h-full flex items-center justify-center relative z-10">
-        <div className="max-w-6xl px-4 sm:px-0 p-6 rounded-lg text-center bg-white/10 backdrop-blur-sm border border-white/20">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-serif font-bold mb-4 sm:mb-6 text-[#5e6f46] text-outline leading-tight">
+        <div className="max-w-4xl text-center text-white p-4 sm:p-8">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold mb-4 leading-tight text-[#f5f5f5] drop-shadow-lg">
             We don't just add years to life, we add life to years.
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-10 text-black text-outline2 leading-relaxed font-bold">
+
+          {/* Gradient Underline */}
+          <div className="mx-auto mb-6 h-1.5 w-32 sm:w-40 md:w-52 rounded-full bg-gradient-to-r from-[#ecc54f] via-[#5e6f46] to-[#ecc54f]" />
+
+          <p className="text-base sm:text-lg md:text-xl font-medium leading-relaxed text-white drop-shadow-md">
             The Satoru Foundation is dedicated to improving the quality of life for the elderly and disabled in our community. We provide essential services, support, and resources to help them live with dignity and respect.
           </p>
-          <div className="flex justify-center">
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-[#ecc54f] bg-black text-white hover:bg-[#ecc54f] hover:text-black text-base sm:text-lg font-bold py-4 sm:py-6 px-6 sm:px-8"
-            >
-              <Link href="/programs">Discover More</Link>
-            </Button>
-          </div>
         </div>
       </div>
 
-      {/* Bottom gradient fade */}
+      {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent z-20"></div>
     </section>
   );
