@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { useState } from "react"
+import { motion } from "framer-motion"
 
 const activities = [
   {
@@ -42,21 +43,51 @@ export default function Whatdowedo() {
   }
 
   return (
-    <section className="py-16 md:py-24 bg-gray-50">
+    <motion.section
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="py-16 md:py-24 bg-gray-50"
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-1 text-[#5e6f46]">What do we do?</h2>
-          <div className="h-1 w-70 bg-[#ecc54f] mx-auto rounded-full mb-6"></div>
-          <p className="text-lg text-black max-w-3xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold mb-1 text-[#5e6f46]"
+          >
+            What do we do?
+          </motion.h2>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ delay: 0.2, duration: 0.4 }}
+            viewport={{ once: true }}
+            className="h-1 w-70 bg-[#ecc54f] mx-auto rounded-full mb-6 origin-left"
+          ></motion.div>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-lg text-black max-w-3xl mx-auto"
+          >
             Here's a glimpse of the impactful work we do across various domains of care and community support.
-          </p>
+          </motion.p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {activities.map((activity) => (
-            <div
+          {activities.map((activity, index) => (
+            <motion.div
               key={activity.id}
               onClick={() => handleFlip(activity.id)}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 * index, duration: 0.6 }}
+              viewport={{ once: true }}
               className="relative perspective cursor-pointer"
             >
               <div className={`w-full h-96 transition-transform duration-700 transform-style-preserve-3d ${flippedCard === activity.id ? 'rotate-y-180' : ''}`}>
@@ -75,10 +106,10 @@ export default function Whatdowedo() {
 
                 {/* Back */}
                 <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-white text-black rounded-lg shadow-md p-6 flex items-center justify-center text-center">
-                <p className="text-xl leading-relaxed font-medium">{activity.description}</p>
+                  <p className="text-xl leading-relaxed font-medium">{activity.description}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -98,6 +129,6 @@ export default function Whatdowedo() {
           transform: rotateY(180deg);
         }
       `}</style>
-    </section>
+    </motion.section>
   )
 }

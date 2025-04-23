@@ -1,3 +1,4 @@
+'use client';
 import { Button } from "../components/ui/button"
 import { Input } from "../components/ui/input"
 import { Textarea } from "../components/ui/textarea"
@@ -6,7 +7,7 @@ import { Mail, MapPin, Phone } from "lucide-react"
 export default function ContactSection() {
   return (
     <section className="py-16 md:py-24 bg-gray-50">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 animate-fade-slide-up">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-1 text-[#5e6f46]">Get In Touch</h2>
           <div className="h-1 w-57 bg-[#ecc54f] mx-auto rounded-full mb-6 mt-1"></div>
@@ -16,7 +17,7 @@ export default function ContactSection() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
-          <div>
+          <div className="animate-fade-in delay-[0.2s]">
             <h3 className="text-2xl font-bold mb-6 text-[#5e6f46]">Contact Information</h3>
 
             <div className="space-y-6">
@@ -24,8 +25,9 @@ export default function ContactSection() {
                 <MapPin className="h-6 w-6 text-[#ecc54f] mr-4 mt-1" />
                 <div>
                   <h4 className="font-semibold text-[#5e6f46]">Address</h4>
-                  <p className="text-gray-600">Model House building, Saibaba Temple Rd, Dwarakapuri,
-                  Punjagutta, Hyderabad, Telangana. 500082</p>
+                  <p className="text-gray-600">
+                    Model House building, Saibaba Temple Rd, Dwarakapuri, Punjagutta, Hyderabad, Telangana. 500082
+                  </p>
                 </div>
               </div>
 
@@ -47,7 +49,7 @@ export default function ContactSection() {
             </div>
           </div>
 
-          <div>
+          <div className="animate-fade-in delay-[0.4s]">
             <h3 className="text-2xl font-bold mb-6 text-[#5e6f46]">Send Us a Message</h3>
 
             <form className="space-y-4">
@@ -83,7 +85,7 @@ export default function ContactSection() {
               <Button
                 type="submit"
                 size="lg"
-                className="w-full sm:w-auto bg-[#5e6f46] hover:bg-[#5e6f46] text-white"
+                className="w-full sm:w-auto bg-[#5e6f46] hover:bg-[#5e6f46] text-white transition-all duration-300 hover:scale-[1.02]"
               >
                 Send Message
               </Button>
@@ -91,6 +93,31 @@ export default function ContactSection() {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fade-in {
+          animation: fadeIn 0.8s ease forwards;
+        }
+        .delay-\\[0\\.2s\\] {
+          animation-delay: 0.2s;
+        }
+        .delay-\\[0\\.4s\\] {
+          animation-delay: 0.4s;
+        }
+        .animate-fade-slide-up {
+          animation: fadeIn 0.6s ease-out both;
+        }
+      `}</style>
     </section>
   )
 }
