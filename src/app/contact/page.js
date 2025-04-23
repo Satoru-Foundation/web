@@ -18,6 +18,22 @@ export default function ContactPage() {
 
       <ContactSection />
 
+      {/* New: Organization Info Section */}
+      <section className="py-16 bg-[#fdf8f2] text-gray-800">
+        <div className="container mx-auto px-4 max-w-3xl space-y-4 text-base md:text-lg leading-relaxed">
+          <p><strong>Organisation Name:</strong> SATORU FOUNDATION™</p>
+          <p>Legal Compliance: Non-Profit Organisation, Registered under Section 8 of the Companies Act, 2013,</p>
+          <p>Approved By Ministry of Corporate Affairs, Government of India.</p>
+          <p>Our main registered office located in Hyderabad, Telangana state, India</p>
+          <p><strong>CIN:</strong>  U72200TS2024NPL189603</p>
+          <p><strong>Darpan:</strong>  TS/2024/0454519</p>
+          <p><strong>PAN:</strong> ABOCS3612C</p>
+          <p><strong>Income TAX (12A/80G Approved)</strong></p>
+          <p>12A : ABOCS3612CE20241</p>
+          <p>80G : ABOCS3612CF20241</p>
+        </div>
+      </section>
+
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 text-gray-800">Frequently Asked Questions</h2>

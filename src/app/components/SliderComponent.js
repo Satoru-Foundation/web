@@ -1,23 +1,19 @@
-// components/SliderComponent.js
 'use client';
 
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
-// Dynamically import the react-slick slider component
 const Slider = dynamic(() => import('react-slick'), { ssr: false });
 
 const SliderComponent = ({ testimonials }) => {
   const [isClient, setIsClient] = useState(false);
 
-  // Ensure the component is rendered only on the client side
   useEffect(() => {
     setIsClient(true);
   }, []);
 
-  if (!isClient) {
-    return null; // Render nothing until we're on the client side
-  }
+  if (!isClient) return null;
 
   const sliderSettings = {
     dots: true,
@@ -32,11 +28,30 @@ const SliderComponent = ({ testimonials }) => {
   return (
     <Slider {...sliderSettings}>
       {testimonials.map((t, idx) => (
-        <div key={idx} className="bg-[#f7f7f7] p-8 rounded-lg shadow-md text-center">
-          <p className="text-lg text-gray-900 italic mb-4">"{t.content}"</p>
-          <h4 className="font-bold text-[#5e6f46]">{t.name}</h4>
-          <h4 className="font-semibold text-[#5e6f46]">{t.qualification}</h4>
-          <p className="text-sm text-gray-500">{t.role}</p>
+        <div key={idx} className="bg-[#f7f7f7] p-8 rounded-lg shadow-md">
+          {/* Top: Photo + Info row */}
+          <div className="flex items-center gap-4 mb-4">
+            {t.image && (
+              <div className="w-20 h-20 md:w-24 md:h-24 relative rounded-full overflow-hidden border-4 border-[#5e6f46]">
+                <Image
+                  src={t.image}
+                  alt={t.name}
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            )}
+            <div>
+              <h4 className="font-bold text-[#5e6f46]">{t.name}</h4>
+              <h4 className="font-semibold text-[#5e6f46]">{t.qualification}</h4>
+              <p className="text-sm text-gray-500">{t.role}</p>
+            </div>
+          </div>
+
+          {/* Bottom: Testimonial text */}
+          <p className="text-lg text-gray-900 italic">
+            "{t.content}"
+          </p>
         </div>
       ))}
     </Slider>

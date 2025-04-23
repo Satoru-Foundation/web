@@ -14,6 +14,7 @@ const testimonials = [
     name: "Sreeja Dasugari",
     role: "Intern",
     qualification:"MSc Biomedical Genetics, VIT, Vellore",
+    image:"/getinvolved/Sreeja.png",
     content:
       "As a Research Intern, I had the opportunity to contribute to a significant psychology project under the guidance of Sai Charan sir. I learned about various psychological scales and their applications, as well as essential data analysis techniques. This internship provided me with a unique opportunity to contribute to meaningful research and develop crucial skills that will undoubtedly be beneficial in my future academic and professional pursuits. I am grateful for the valuable mentorship and support provided by Satoru Foundation throughout my internship.",
   },
@@ -21,6 +22,7 @@ const testimonials = [
     name: "Prathyusha Pulugurtha",
     role: "Intern",
     qualification:"M.Sc, Clinical Psychology, Christ University",
+    image:"/getinvolved/Prathysha.jpg",
     content:
       "I had the distinct pleasure of working with Mr. Sai Charan at Satoru Foundation on a research project focused on the aged population. This collaboration provided me with valuable professional insights and significant personal enrichment. Working with elderly populations presents unique challenges and experiences, all of which were navigated seamlessly under Mr. Sai Charan's guidance. As a mentor and guide, he made the entire research experience both knowledgeable and meaningful",
   },
@@ -28,6 +30,7 @@ const testimonials = [
     name: "Khushbu Yadav",
     role: "Intern",
     qualification:"M.Sc, Health Psychology, University of Hyderabad",
+    image:"/getinvolved/Khushbu.jpg",
     content:
       "As an intern, I had the privilege of working under the guidance of Sai Charan Sir at Satoru Foundation. The experience was transformative, both personally and professionally. The foundation fosters a collaborative, supportive, and intellectually stimulating environment, emphasizing ethics and empathy in all research endeavors. Under Sir’s mentorship, I gained invaluable hands-on experience in research, enhancing my skills and understanding of the field. His guidance and encouragement played a pivotal role in my growth. I highly recommend Satoru Foundation to anyone seeking to advance their research experience in a professional and nurturing setting dedicated to meaningful psychological insights!",
   },
@@ -35,6 +38,7 @@ const testimonials = [
     name: "Purvi Agarwal",
     role: "Intern",
     qualification:"PGD, Psychological Counseling, St Francis College for Women, Hyderabad",
+    image:"/getinvolved/Purvi.jpg",
     content:
       "I had a wonderful time interning with the Satoru Foundation under Charan sir. Being part of the research project with him was an incredible experience the kind of exposure one gains is truly remarkable. This research work not only enhanced my skills in analytical thinking and collaboration but also brought me closer to working with an inspiring age group, allowing me to learn so much from older generations. Charan sir’s guidance made the process seamless; his support and vast knowledge were invaluable. I am deeply grateful for this opportunity, which has given me new perspectives and confidence in my abilities.",
   },
@@ -42,6 +46,7 @@ const testimonials = [
     name: "Akhil Kumar Pandula",
     role: "Intern",
     qualification:"Hyderabad Public School, M.A Social Work - University of Madras",
+    image:"/getinvolved/Akhil.jpg",
     content:
       "Working with the Satoru foundation is a great experience under the guidance of the founder Mr. Sai Charan who is very helpful and resourceful throughout the journey. While working closely with older people I understood how to deal with them on a day to day basis. It helped me to gain knowledge on how to handle research projects. It was also great working with an understanding team who are quick learners without which these learnings are impossible. Altogether it was really a wonderful experience being able to intern at Satoru foundation. I would like to thank the founder once again for this wonderful opportunity.",
   },
@@ -49,6 +54,7 @@ const testimonials = [
     name: "Tulasi Kuchibhotla",
     role: "Intern",
     qualification:"M.A Applied Psychology, GITAM University",
+    image:"/getinvolved/Tulasi.jpg",
     content:
       "Working with Charan Sir at Satoru Foundation has been an amazing learning experience. The work environment was positive and healthy, thanks to his hospitality, respect for interns, and understanding nature. He created a space where we felt valued and motivated to learn and contribute. I’m genuinely grateful for the guidance and encouragement I received during this journey. Looking forward to work in many more projects.",
   },
