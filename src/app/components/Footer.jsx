@@ -23,26 +23,18 @@ export default function Footer() {
           </div>
 
           {/* Links */}
-          <div className="flex flex-col items-center">
+          <div >
             <h3 className="text-lg font-bold mb-1">Links</h3>
-            <div className="w-55 h-1 bg-[#ecc54f] mb-4 rounded"></div>
-            <div className="flex gap-12">
-              <ul className="space-y-3 text-white text-center">
-                <li><Link href="/" className="hover:text-[#ecc54f]">Home</Link></li>
-                <li><Link href="/about" className="hover:text-[#ecc54f]">About us</Link></li>
-                <li><Link href="/ourwork" className="hover:text-[#ecc54f]">Our Work</Link></li>
-                <li><Link href="/projects" className="hover:text-[#ecc54f]">Projects</Link></li>
-              </ul>
-              <ul className="space-y-3 text-white text-center">
-                <li><Link href="/meenestham" className="hover:text-[#ecc54f]">MeeNestham</Link></li>
-                <li><Link href="/getinvolved" className="hover:text-[#ecc54f]">Get Involved</Link></li>
-                <li><Link href="/mediacentre" className="hover:text-[#ecc54f]">Media</Link></li>
-                <li><Link href="/contact" className="hover:text-[#ecc54f]">Contact</Link></li>
-              </ul>
-            </div>
+            <div className="w-15 h-1 bg-[#ecc54f] mb-4 rounded"></div>
+            <ul className="space-y-3 text-white">
+              <li><Link href="/" className="hover:text-[#ecc54f]">Home</Link></li>
+              <li><Link href="/about" className="hover:text-[#ecc54f]">About us</Link></li>
+              <li><Link href="/ourwork" className="hover:text-[#ecc54f]">Our Work</Link></li>
+              <li><Link href="/meenestham" className="hover:text-[#ecc54f]">MeeNestham</Link></li>
+              <li><Link href="/getinvolved" className="hover:text-[#ecc54f]">Get Involved</Link></li>
+              <li><Link href="/contact" className="hover:text-[#ecc54f]">Contact</Link></li>
+            </ul>
           </div>
-
-
 
           {/* Our Projects */}
           <div>

@@ -131,16 +131,14 @@ export default function AboutPage() {
             lives of older people in India.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button asChild size="lg" className="bg-[#5e6f46] hover:bg-[#5e6f46]/90">
-              <a href="https://forms.gle/JXMZWr6euHobNas9A" className="text-[#5e6f46] hover:underline">Volunteer With Us</a>
+            <Button size="lg" className="bg-[#5e6f46] hover:bg-[#5e6f46]/90">
+              <a href="https://forms.gle/JXMZWr6euHobNas9A" className="text-white hover:underline">Volunteer With Us</a>
             </Button>
             <Button
-              asChild
               size="lg"
-              variant="outline"
-              className="border-[#5e6f46] text-black hover:bg-[#5e6f46]/10"
+              className="bg-[#ecc54f] text-black hover:bg-[#eab308]"
             >
-              <a href="https://rzp.io/rzp/rAIotl7h" className="text-[#5e6f46] hover:underline">Support Our Work</a>
+              <a href="https://rzp.io/rzp/rAIotl7h" className="text-black hover:underline">Support Our Work</a>
             </Button>
           </div>
         </div>
