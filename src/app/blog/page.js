@@ -2,6 +2,7 @@ import { prisma } from 'lib/prisma'
 import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import Image from 'next/image'
 
 async function getBlogs() {
   const blogs = await prisma.blog.findMany({
@@ -29,10 +30,12 @@ export default async function BlogListPage() {
                 {/* Left side - Image with Aspect Ratio Maintained */}
                 {blog.headImage && (
                   <div className="w-1/5 h-[230px] relative">
-                    <img
+                    <Image
                       src={blog.headImage}
                       alt={blog.title}
-                      className="object-contain w-full h-full rounded-l-lg"
+                      width={800}
+                      height={400}
+                      className="rounded mb-6 w-full object-cover"
                     />
                   </div>
                 )}

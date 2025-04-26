@@ -2,6 +2,7 @@ import { prisma } from 'lib/prisma'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import Link from 'next/link'
+import Image from 'next/image'
 
 // Pre-generate all blog slugs at build time
 export async function generateStaticParams() {
@@ -40,7 +41,7 @@ export default async function BlogPage({ params }) {
         <p className="text-black mb-6">{blog.summary}</p>
 
         {blog.headImage && (
-          <img src={blog.headImage} alt={blog.title} className="rounded mb-6 w-full object-cover" />
+          <Image src={blog.headImage} alt={blog.title} className="rounded mb-6 w-full object-cover" />
         )}
 
         <div className="space-y-6">
@@ -48,7 +49,7 @@ export default async function BlogPage({ params }) {
             block.type === "paragraph" ? (
               <p key={index} className="text-black leading-relaxed">{block.text}</p>
             ) : block.type === "image" ? (
-              <img key={index} src={block.url} alt={`block-${index}`} className="rounded w-full object-cover" />
+              <Image key={index} src={block.url} alt={`block-${index}`} className="rounded w-full object-cover" />
             ) : null
           ))}
         </div>

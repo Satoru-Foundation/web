@@ -1,6 +1,8 @@
 "use client"
 
 import { useState } from "react"
+import Image from 'next/image'
+
 export default function AdminPage() {
   const [title, setTitle] = useState("")
   const [slug, setSlug] = useState("")
@@ -101,7 +103,7 @@ export default function AdminPage() {
             onChange={e => handleHeadImageUpload(e.target.files[0])}
             className="w-full border p-2 rounded"
           />
-          {headImage && <img src={headImage} alt="Head Preview" className="mt-2 rounded" />}
+          {headImage && <Image src={headImage} alt="Head Preview" width={400} height={300} className="mt-2 rounded" />}
         </div>
       </div>
 
@@ -125,7 +127,7 @@ export default function AdminPage() {
                   onChange={e => updateImageBase64(index, e.target.files[0])}
                   className="w-full border p-2 rounded"
                 />
-                {block.url && <img src={block.url} alt="Block Preview" className="mt-2 rounded" />}
+                {block.url && <Image src={block.url} alt="Block Preview" width={400} height={300} className="mt-2 rounded" />}
               </>
             )}
           </div>
