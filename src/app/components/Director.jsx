@@ -9,7 +9,7 @@ export default function DirectorProfile() {
         <div className="md:flex">
           {/* Image Column - Add your image path */}
           <div className="md:w-1/3 p-6 flex justify-center">
-            <div className="relative h-100 w-100 overflow-hidden border- border-[#5e6f46]">
+            <div className="relative h-100 w-100 overflow-hidden border- border-[#5e6f47]">
               <Image
                 src="/about/director.jpg" // Update with your image path
                 alt="Kanagala Sai Charan"
@@ -22,7 +22,7 @@ export default function DirectorProfile() {
           
           {/* Content Column */}
           <div className="md:w-2/3 p-6">
-            <h1 className="text-3xl font-bold text-[#5e6f46] mb-2">Kanagala Sai Charan</h1>
+            <h1 className="text-3xl font-bold text-[#5e6f47] mb-2">Kanagala Sai Charan</h1>
             <p className="text-xl font-semibold text-gray-600 mb-6">Director</p>
             
             <div className="space-y-4 text-gray-700">

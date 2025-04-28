@@ -32,7 +32,7 @@ const SliderComponent = ({ testimonials }) => {
           {/* Top: Photo + Info row */}
           <div className="flex items-center gap-4 mb-4">
             {t.image && (
-              <div className="w-20 h-20 md:w-24 md:h-24 relative rounded-full overflow-hidden border-4 border-[#5e6f46]">
+              <div className="w-20 h-20 md:w-24 md:h-24 relative rounded-full overflow-hidden border-4 border-[#5e6f47]">
                 <Image
                   src={t.image}
                   alt={t.name}
@@ -42,8 +42,8 @@ const SliderComponent = ({ testimonials }) => {
               </div>
             )}
             <div>
-              <h4 className="font-bold text-[#5e6f46]">{t.name}</h4>
-              <h4 className="font-semibold text-[#5e6f46]">{t.qualification}</h4>
+              <h4 className="font-bold text-[#5e6f47]">{t.name}</h4>
+              <h4 className="font-semibold text-[#5e6f47]">{t.qualification}</h4>
               <p className="text-sm text-gray-500">{t.role}</p>
             </div>
           </div>

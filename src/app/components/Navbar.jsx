@@ -46,16 +46,16 @@ export default function Navbar() {
             >
               <Link
                 href={item.href}
-                className="text-[#5e6f46] font-semibold text-lg transition-colors duration-300 group-hover:text-[#ecc54f]"
+                className="text-[#5e6f47] font-semibold text-lg transition-colors duration-300 group-hover:text-[#ecc750]"
               >
                 {item.name}
               </Link>
-              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#ecc54f] group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#ecc750] group-hover:w-full transition-all duration-300"></span>
             </motion.div>
           ))}
           <Link
             href="https://rzp.io/rzp/rAIotl7h"
-            className="ml-4 bg-[#ecc54f] text-[#5e6f46] px-6 py-2 font-bold rounded-lg border-2 border-[#ecc54f] hover:bg-[#5e6f46] hover:text-[#ecc54f] transition duration-300"
+            className="ml-4 bg-[#ecc750] text-[#5e6f47] px-6 py-2 font-bold rounded-lg border-2 border-[#ecc750] hover:bg-[#5e6f47] hover:text-[#ecc750] transition duration-300"
           >
             Donate
           </Link>
@@ -64,7 +64,7 @@ export default function Navbar() {
         {/* Mobile Button */}
         <button
           onClick={toggleMenu}
-          className="md:hidden text-[#5e6f46] hover:text-[#ecc54f]"
+          className="md:hidden text-[#5e6f47] hover:text-[#ecc750]"
           aria-label="Toggle menu"
         >
           {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -90,7 +90,7 @@ export default function Navbar() {
                 >
                   <Link
                     href={item.href}
-                    className="text-[#5e6f46] text-lg font-semibold hover:text-[#ecc54f] transition"
+                    className="text-[#5e6f47] text-lg font-semibold hover:text-[#ecc750] transition"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
@@ -100,7 +100,7 @@ export default function Navbar() {
               <li>
                 <Link
                   href="https://rzp.io/rzp/rAIotl7h"
-                  className="inline-block bg-[#ecc54f] text-[#5e6f46] w-full text-center px-4 py-2 mt-2 font-bold rounded-md border-2 border-[#ecc54f] hover:bg-[#5e6f46] hover:text-[#ecc54f] transition"
+                  className="inline-block bg-[#ecc750] text-[#5e6f47] w-full text-center px-4 py-2 mt-2 font-bold rounded-md border-2 border-[#ecc750] hover:bg-[#5e6f47] hover:text-[#ecc750] transition"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Donate

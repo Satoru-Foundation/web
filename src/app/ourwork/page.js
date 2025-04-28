@@ -40,7 +40,7 @@ export default function OurWorkPage() {
     <main className="min-h-screen">
       <Navbar />
 
-      <section className="bg-[#5e6f46] text-white py-20">
+      <section className="bg-[#5e6f47] text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Work</h1>
           <p className="text-xl max-w-3xl mx-auto">
@@ -55,7 +55,7 @@ export default function OurWorkPage() {
             <p className="text-lg text-gray-600 max-w-9xl mx-auto mb-6">
             At Satoru Foundation™, our activities are driven by a deep commitment to creating meaningful change in society—especially for older individuals and marginalized communities. Through our diverse activities, we address critical issues such as poor health, limited livelihood opportunities, and lack of awareness. From promoting holistic health and well-being to empowering individuals through skills training, research, advocacy, and innovation, each initiative is designed to improve the quality of life, foster sustainability, and build a more inclusive and equitable future for all.
             </p>
-            <div className="h-1 w-full bg-[#ecc54f] mx-auto rounded-full mb-6 mt-1"></div>
+            <div className="h-1 w-full bg-[#ecc750] mx-auto rounded-full mb-6 mt-1"></div>
           </div>
 
           <div className="space-y-20">
@@ -65,13 +65,13 @@ export default function OurWorkPage() {
                 className={`grid md:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
               >
                 <div className={index % 2 === 1 ? "md:order-2" : ""}>
-                  <h2 className="text-3xl font-bold mb-6 text-[#5e6f46]">{activity.title}</h2>
+                  <h2 className="text-3xl font-bold mb-6 text-[#5e6f47]">{activity.title}</h2>
                   <p className="text-lg text-gray-600 mb-6">{activity.description}</p>
                   <p className="text-lg text-gray-600 mb-8">
                     Through our {activity.title.toLowerCase()} activity, we've been able to impact thousands of lives and
                     create lasting positive change for older adults across India.
                   </p>
-                  <Button size="lg" className="bg-[#5e6f46] hover:bg-[#5e6f46]/90 text-white">
+                  <Button size="lg" className="bg-[#5e6f47] hover:bg-[#5e6f47]/90 text-white">
                     <Link href={`/ourwork/${activity.id}`}>Learn More</Link>
                   </Button>
                 </div>

@@ -77,7 +77,7 @@ const GetInvolved = () => {
     <main className="min-h-screen">
       <Navbar />
 
-      <section className="bg-[#5e6f46] text-white py-20">
+      <section className="bg-[#5e6f47] text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Get Involved</h1>
           <p className="text-xl max-w-3xl mx-auto">
@@ -88,7 +88,7 @@ const GetInvolved = () => {
 
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-[#5e6f46] mb-12">Current Openings</h2>
+          <h2 className="text-3xl font-bold text-center text-[#5e6f47] mb-12">Current Openings</h2>
           <div className="grid md:grid-cols-2 gap-10">
             {jobOpenings.map((job, index) => (
               <div key={index} className="p-6 border rounded-xl shadow-md">
@@ -105,10 +105,10 @@ const GetInvolved = () => {
                   <br />
                 <div className="flex gap-4">
                   <Link href={job.viewLink}>
-                    <Button className="bg-[#ecc54f] hover:bg-[#eab308] text-black">View Description</Button>
+                    <Button className="bg-[#ecc750] hover:bg-[#eab308] text-black">View Description</Button>
                   </Link>
                   <Link href={job.applyLink}>
-                    <Button className="bg-[#5e6f46] hover:bg-[#5e6f46]/90 text-white">Apply Now</Button>
+                    <Button className="bg-[#5e6f47] hover:bg-[#5e6f47]/90 text-white">Apply Now</Button>
                   </Link>
                 </div>
               </div>
@@ -119,16 +119,16 @@ const GetInvolved = () => {
 
       <section className="py-16 md:py-24 bg-[#fef9ef]">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-[#5e6f46] mb-8">Become a Volunteer or Intern</h2>
+          <h2 className="text-3xl font-bold text-[#5e6f47] mb-8">Become a Volunteer or Intern</h2>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-10">
             Join our mission to create a better world. Whether you're looking to give back or gain experience, we have a place for you.
           </p>
           <div className="flex flex-col md:flex-row justify-center gap-6">
             <Link href="https://forms.gle/JXMZWr6euHobNas9A">
-              <Button className="bg-[#ecc54f] text-black hover:bg-[#eab308]">Apply to be a Volunteer</Button>
+              <Button className="bg-[#ecc750] text-black hover:bg-[#eab308]">Apply to be a Volunteer</Button>
             </Link>
             <Link href="https://forms.gle/5Ua6qiVWdZVWDZoz8">
-              <Button className="bg-[#5e6f46] text-white hover:bg-[#5e6f46]/90">Apply to be an Intern</Button>
+              <Button className="bg-[#5e6f47] text-white hover:bg-[#5e6f47]/90">Apply to be an Intern</Button>
             </Link>
           </div>
         </div>
@@ -136,7 +136,7 @@ const GetInvolved = () => {
 
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl text-[#5e6f46] font-bold text-center mb-12">What Our Interns Say</h2>
+          <h2 className="text-3xl text-[#5e6f47] font-bold text-center mb-12">What Our Interns Say</h2>
           <div className="max-w-4xl mx-auto">
             {/* Use the SliderComponent here */}
             <SliderComponent testimonials={testimonials} />

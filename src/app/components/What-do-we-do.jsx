@@ -57,7 +57,7 @@ export default function Whatdowedo() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold mb-1 text-[#5e6f46]"
+            className="text-3xl md:text-4xl font-bold mb-1 text-[#5e6f47]"
           >
             What do we do?
           </motion.h2>
@@ -66,7 +66,7 @@ export default function Whatdowedo() {
             whileInView={{ scaleX: 1 }}
             transition={{ delay: 0.2, duration: 0.4 }}
             viewport={{ once: true }}
-            className="h-1 w-70 bg-[#ecc54f] mx-auto rounded-full mb-6 origin-left"
+            className="h-1 w-70 bg-[#ecc750] mx-auto rounded-full mb-6 origin-left"
           ></motion.div>
           <motion.p
             initial={{ opacity: 0 }}

@@ -9,7 +9,7 @@ export default function AwarenessPage() {
     <main className="min-h-screen">
       <Navbar />
 
-      <section className="bg-[#5e6f46] text-white py-20">
+      <section className="bg-[#5e6f47] text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Rights and advocacy</h1>
         </div>
@@ -21,7 +21,7 @@ export default function AwarenessPage() {
           {/* Card 1 - Text Left, Image Right */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-4 text-[#5e6f46]">Empowering Marginalized Communities</h2>
+              <h2 className="text-3xl font-bold mb-4 text-[#5e6f47]">Empowering Marginalized Communities</h2>
               <p className="text-lg text-gray-600 mb-4">
               At our organization, we are dedicated to uplifting marginalized communities facing unfair treatment and limited access to essential services like healthcare, education, and employment. Our mission is to ensure that every individual, regardless of background, is treated with equality and respect.
               </p>
@@ -39,7 +39,7 @@ export default function AwarenessPage() {
           {/* Card 2 - Text Right, Image Left */}
           <div className="grid md:grid-cols-2 gap-12 items-center md:flex-row-reverse">
             <div className="md:order-2">
-              <h2 className="text-3xl font-bold mb-4 text-[#5e6f46]">Supporting Older Adults</h2>
+              <h2 className="text-3xl font-bold mb-4 text-[#5e6f47]">Supporting Older Adults</h2>
               <p className="text-lg text-gray-600 mb-4">
               Older adults deserve to live with dignity, care, and support. Unfortunately, many seniors face challenges such as loneliness, poor health, and financial insecurity. We work tirelessly to ensure they remain healthy, active, and connected to their communities by providing access to vital services.
               </p>
@@ -56,7 +56,7 @@ export default function AwarenessPage() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-4 text-[#5e6f46]">Advocating for Equal Rights</h2>
+              <h2 className="text-3xl font-bold mb-4 text-[#5e6f47]">Advocating for Equal Rights</h2>
               <p className="text-lg text-gray-600 mb-4">
               Every person deserves equal rights, and we are committed to addressing ageism and all forms of prejudice. Our advocacy focuses on protecting everyone’s rights through laws and policies that promote fairness in education, healthcare, and employment opportunities.
               </p>
@@ -73,7 +73,7 @@ export default function AwarenessPage() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center md:flex-row-reverse">
             <div className="md:order-2">
-              <h2 className="text-3xl font-bold mb-4 text-[#5e6f46]">A Vision for the Future</h2>
+              <h2 className="text-3xl font-bold mb-4 text-[#5e6f47]">A Vision for the Future</h2>
               <p className="text-lg text-gray-600 mb-4">
               We envision a future where marginalized communities and older individuals have the same chances as everyone else. By raising awareness and providing support, we strive to build a more just world where everyone’s rights are respected. Join us in this vital mission!
               </p>
@@ -90,7 +90,7 @@ export default function AwarenessPage() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
                       <div>
-                        <h2 className="text-3xl font-bold mb-4 text-[#5e6f46]">Assistance to Vulnerable Populations</h2>
+                        <h2 className="text-3xl font-bold mb-4 text-[#5e6f47]">Assistance to Vulnerable Populations</h2>
                         <ul className="list-none space-y-3 text-gray-700">
                           <li> <strong>Social and cultural exclusion: Putting in place initiatives to help those who are subjected to discrimination because of social norms and cultural practices, such as community integration initiatives, awareness campaigns, and legal assistance.</strong></li>
                           <li> <strong>Promoting older adults' rights and offering them the tools and assistance they need to overcome age-related prejudices in the workplace and society is known as age discrimination /Ageism. Ageism awareness involves educating people and organisations about ageism, its effects, and strategies to counteract it through training programs.</strong></li>

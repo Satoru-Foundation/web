@@ -25,8 +25,8 @@ export default function OurActivitiesHome() {
     <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-1 text-[#5e6f46]">Our Activities</h2>
-          <div className="h-1 w-57 bg-[#ecc54f] mx-auto rounded-full mb-6 mt-1"></div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-1 text-[#5e6f47]">Our Activities</h2>
+          <div className="h-1 w-57 bg-[#ecc750] mx-auto rounded-full mb-6 mt-1"></div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

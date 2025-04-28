@@ -9,7 +9,7 @@ export default function SkillsPage() {
     <main className="min-h-screen">
       <Navbar />
 
-      <section className="bg-[#5e6f46] text-white py-20">
+      <section className="bg-[#5e6f47] text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Skills Training & Capacity Building</h1>
           

@@ -69,8 +69,8 @@ export default function ContactSection() {
     <section className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4 animate-fade-slide-up">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-1 text-[#5e6f46]">Get In Touch</h2>
-          <div className="h-1 w-57 bg-[#ecc54f] mx-auto rounded-full mb-6 mt-1"></div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-1 text-[#5e6f47]">Get In Touch</h2>
+          <div className="h-1 w-57 bg-[#ecc750] mx-auto rounded-full mb-6 mt-1"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Have questions about our projects or want to get involved? Reach out to us!
           </p>
@@ -78,13 +78,13 @@ export default function ContactSection() {
 
         <div className="grid md:grid-cols-2 gap-12">
           <div className="animate-fade-in delay-[0.2s]">
-            <h3 className="text-2xl font-bold mb-6 text-[#5e6f46]">Contact Information</h3>
+            <h3 className="text-2xl font-bold mb-6 text-[#5e6f47]">Contact Information</h3>
 
             <div className="space-y-6">
               <div className="flex items-start">
-                <MapPin className="h-6 w-6 text-[#ecc54f] mr-4 mt-1" />
+                <MapPin className="h-6 w-6 text-[#ecc750] mr-4 mt-1" />
                 <div>
-                  <h4 className="font-semibold text-[#5e6f46]">Address</h4>
+                  <h4 className="font-semibold text-[#5e6f47]">Address</h4>
                   <p className="text-gray-600">
                     Model House building, Saibaba Temple Rd, Dwarakapuri, Punjagutta, Hyderabad, Telangana. 500082
                   </p>
@@ -92,17 +92,17 @@ export default function ContactSection() {
               </div>
 
               <div className="flex items-start">
-                <Phone className="h-6 w-6 text-[#ecc54f] mr-4 mt-1" />
+                <Phone className="h-6 w-6 text-[#ecc750] mr-4 mt-1" />
                 <div>
-                  <h4 className="font-semibold text-[#5e6f46]">Phone</h4>
+                  <h4 className="font-semibold text-[#5e6f47]">Phone</h4>
                   <p className="text-gray-600">+91 6303637871</p>
                 </div>
               </div>
 
               <div className="flex items-start">
-                <Mail className="h-6 w-6 text-[#ecc54f] mr-4 mt-1" />
+                <Mail className="h-6 w-6 text-[#ecc750] mr-4 mt-1" />
                 <div>
-                  <h4 className="font-semibold text-[#5e6f46]">Email</h4>
+                  <h4 className="font-semibold text-[#5e6f47]">Email</h4>
                   <p className="text-gray-600">info@satorufoundation.org</p>
                 </div>
               </div>
@@ -110,7 +110,7 @@ export default function ContactSection() {
           </div>
 
           <div className="animate-fade-in delay-[0.4s]">
-            <h3 className="text-2xl font-bold mb-6 text-[#5e6f46]">Send Us a Message</h3>
+            <h3 className="text-2xl font-bold mb-6 text-[#5e6f47]">Send Us a Message</h3>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -171,7 +171,7 @@ export default function ContactSection() {
               <Button
                 type="submit"
                 size="lg"
-                className="w-full sm:w-auto bg-[#5e6f46] hover:bg-[#5e6f46] text-white transition-all duration-300 hover:scale-[1.02]"
+                className="w-full sm:w-auto bg-[#5e6f47] hover:bg-[#5e6f47] text-white transition-all duration-300 hover:scale-[1.02]"
                 disabled={loading}
               >
                 {loading ? 'Sending...' : 'Send Message'}

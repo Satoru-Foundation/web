@@ -9,7 +9,7 @@ export default function AboutPage() {
     <main className="min-h-screen">
       <Navbar />
 
-      <section className="bg-[#5e6f46] text-white py-20">
+      <section className="bg-[#5e6f47] text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">About Satoru Foundation</h1>
           <p className="text-xl max-w-3xl mx-auto">
@@ -23,7 +23,7 @@ export default function AboutPage() {
           {/* Who We Are */}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <h2 className="text-3xl font-bold mb-6 text-[#5e6f46]">Who We Are</h2>
+              <h2 className="text-3xl font-bold mb-6 text-[#5e6f47]">Who We Are</h2>
               <p className="text-lg text-gray-600 mb-4">
                 We are a passionate team committed to driving positive change in society through innovative research,
                 collaborative partnerships, and providing impactful outcome-based education and skill training
@@ -54,25 +54,25 @@ export default function AboutPage() {
       {/* NEW FULL-WIDTH MISSION SECTION */}
       <section className="w-full bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-12 text-[#5e6f46] text-center">
+          <h2 className="text-3xl font-bold mb-12 text-[#5e6f47] text-center">
             Our Mission and Purpose
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-md p-6 text-center">
-              <h3 className="text-xl font-semibold mb-4 text-[#5e6f46]">Our Mission</h3>
+              <h3 className="text-xl font-semibold mb-4 text-[#5e6f47]">Our Mission</h3>
               <p className="text-gray-700">
                 Health, justice, and dignity for all is our main mission. The Satoru Foundation's goals align with
                 Sustainable Development Goals (SDG). We build alliances with diverse stakeholders, including educational institutions, companies, and government and non-government organisations, to achieve our goals. We are dedicated to enhancing quality of life, fostering sustainability, and championing underprivileged communities across India.
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6 text-center">
-              <h3 className="text-xl font-semibold mb-4 text-[#5e6f46]">Our Purpose</h3>
+              <h3 className="text-xl font-semibold mb-4 text-[#5e6f47]">Our Purpose</h3>
               <p className="text-gray-700">
                 To create a healthy environment for older adults, and provide them with the psychological skills and guidance to thrive. We work towards eradicating poverty by extending access to essential resources and livelihood opportunities.
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6 text-center">
-              <h3 className="text-xl font-semibold mb-4 text-[#5e6f46]">The Story Behind Our Name</h3>
+              <h3 className="text-xl font-semibold mb-4 text-[#5e6f47]">The Story Behind Our Name</h3>
               <p className="text-gray-700">
                 Satoru (悟る), a word derived from Zen Buddhism, means "to understand" or "to attain enlightenment" in Japanese. It implies deep wisdom or spiritual realisation.
               </p>
@@ -86,24 +86,24 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           {/* Our Values */}
           <div className="mb-5">
-            <h2 className="text-3xl font-bold mb-8 text-[#5e6f46] text-center">Our Values</h2>
+            <h2 className="text-3xl font-bold mb-8 text-[#5e6f47] text-center">Our Values</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-gray-50 p-8 rounded-lg">
-                <h3 className="text-xl font-bold mb-4 text-[#5e6f46]">Compassion</h3>
+                <h3 className="text-xl font-bold mb-4 text-[#5e6f47]">Compassion</h3>
                 <p className="text-gray-600">
                   We approach our work with empathy and understanding, recognizing the unique challenges faced by older
                   people in India.
                 </p>
               </div>
               <div className="bg-gray-50 p-8 rounded-lg">
-                <h3 className="text-xl font-bold mb-4 text-[#5e6f46]">Innovation</h3>
+                <h3 className="text-xl font-bold mb-4 text-[#5e6f47]">Innovation</h3>
                 <p className="text-gray-600">
                   We continuously seek creative solutions to complex problems, utilizing science and technology to
                   develop effective interventions.
                 </p>
               </div>
               <div className="bg-gray-50 p-8 rounded-lg">
-                <h3 className="text-xl font-bold mb-4 text-[#5e6f46]">Evidence-Based</h3>
+                <h3 className="text-xl font-bold mb-4 text-[#5e6f47]">Evidence-Based</h3>
                 <p className="text-gray-600">
                   We are committed to rigorous research and data-driven approaches to ensure our programs deliver
                   meaningful outcomes.
@@ -116,7 +116,7 @@ export default function AboutPage() {
 
       <section className="py-10 md:py-24 bg-gray-50">   {/* Our Team */}
           <div>
-            <h2 className="text-3xl font-bold mb-8 text-[#5e6f46] text-center">Our Team</h2>
+            <h2 className="text-3xl font-bold mb-8 text-[#5e6f47] text-center">Our Team</h2>
             <DirectorProfile />
           </div>
 
@@ -125,18 +125,18 @@ export default function AboutPage() {
       {/* Join Our Mission */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 text-[#5e6f46]">Join Our Mission</h2>
+          <h2 className="text-3xl font-bold mb-6 text-[#5e6f47]">Join Our Mission</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
             We're always looking for passionate individuals and organizations to join us in our mission to improve the
             lives of older people in India.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" className="bg-[#5e6f46] hover:bg-[#5e6f46]/90">
+            <Button size="lg" className="bg-[#5e6f47] hover:bg-[#5e6f47]/90">
               <a href="https://forms.gle/JXMZWr6euHobNas9A" className="text-white hover:underline">Volunteer With Us</a>
             </Button>
             <Button
               size="lg"
-              className="bg-[#ecc54f] text-black hover:bg-[#eab308]"
+              className="bg-[#ecc750] text-black hover:bg-[#eab308]"
             >
               <a href="https://rzp.io/rzp/rAIotl7h" className="text-black hover:underline">Support Our Work</a>
             </Button>

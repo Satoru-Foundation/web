@@ -9,7 +9,7 @@ export default function IAANSHPage() {
     <main className="min-h-screen">
       <Navbar />
 
-      <section className="bg-[#5e6f46] text-white py-20">
+      <section className="bg-[#5e6f47] text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">IAANSH:Institute for applied research & advocacy in natural, social and health sciences</h1>
         </div>
@@ -21,7 +21,7 @@ export default function IAANSHPage() {
           <div>
             {/* Title and Badge */}
             <div className="mb-6">
-              <span className="inline-block bg-[#ecc54f] text-3xl text-[#5e6f46] font-bold px-4 py-1 rounded-full mb-4">
+              <span className="inline-block bg-[#ecc750] text-3xl text-[#5e6f47] font-bold px-4 py-1 rounded-full mb-4">
               IAANSH
               </span>
               <p className="text-gray-900 mb-6 leading-relaxed text-[20px]">

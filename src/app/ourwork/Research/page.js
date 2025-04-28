@@ -26,7 +26,7 @@ export default function ResearchPage() {
     <main className="min-h-screen">
       <Navbar />
 
-      <section className="bg-[#5e6f46] text-white py-20">
+      <section className="bg-[#5e6f47] text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Research</h1>
         </div>
@@ -42,13 +42,13 @@ export default function ResearchPage() {
                 className={`grid md:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
               >
                 <div className={index % 2 === 1 ? "md:order-2" : ""}>
-                  <h2 className="text-3xl font-bold mb-6 text-[#5e6f46]">{research.title}</h2>
+                  <h2 className="text-3xl font-bold mb-6 text-[#5e6f47]">{research.title}</h2>
                   <p className="text-lg text-gray-600 mb-6">{research.description}</p>
                   <p className="text-lg text-gray-600 mb-8">
                     Through our {research.title.toLowerCase()} projects, we've been able to impact thousands of lives and
                     create lasting positive change for older adults across India.
                   </p>
-                  <Button size="lg" className="bg-[#5e6f46] hover:bg-[#5e6f46]/90 text-white">
+                  <Button size="lg" className="bg-[#5e6f47] hover:bg-[#5e6f47]/90 text-white">
                     <Link href={`/ourwork/Research/${research.id}`}>Learn More</Link>
                   </Button>
                 </div>

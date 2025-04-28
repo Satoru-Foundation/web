@@ -30,7 +30,7 @@ export default function AboutSection() {
             viewport={{ once: true }}
             className="order-2 lg:order-1"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-6 sm:mb-8 text-[#5e6f46]">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-6 sm:mb-8 text-[#5e6f47]">
               About Satoru Foundation
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-black mb-4 sm:mb-6 leading-relaxed">
@@ -41,7 +41,7 @@ export default function AboutSection() {
             </p>
             <Button
               size="lg"
-              className="bg-[#5e6f46] hover:bg-[#ecc54f] text-white hover:text-black text-lg font-bold py-4 sm:py-6 px-6 sm:px-8"
+              className="bg-[#5e6f47] hover:bg-[#ecc750] text-white hover:text-black text-lg font-bold py-4 sm:py-6 px-6 sm:px-8"
             >
               <Link href="/about">Learn More About Us</Link>
             </Button>

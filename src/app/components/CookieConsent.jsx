@@ -28,7 +28,7 @@ export default function CookieConsent() {
       <div className="flex flex-col gap-2">
         <button
           onClick={() => handleConsent("all")}
-          className="bg-[#ecc54f] text-black font-semibold px-4 py-2 rounded hover:bg-yellow-400 transition"
+          className="bg-[#ecc750] text-black font-semibold px-4 py-2 rounded hover:bg-yellow-400 transition"
         >
           Accept All
         </button>

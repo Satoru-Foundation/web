@@ -9,7 +9,7 @@ export default function HolisticPage() {
     <main className="min-h-screen">
       <Navbar />
 
-      <section className="bg-[#5e6f46] text-white py-20">
+      <section className="bg-[#5e6f47] text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Holistic Health & More</h1>
           <p className="text-xl max-w-3xl mx-auto">
@@ -28,7 +28,7 @@ export default function HolisticPage() {
           {/* Card 1 - Text Left, Image Right */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-4 text-[#5e6f46]">Holistic Health & Well-being Initiatives</h2>
+              <h2 className="text-3xl font-bold mb-4 text-[#5e6f47]">Holistic Health & Well-being Initiatives</h2>
               <p className="text-lg text-gray-600 mb-4">
                 We are committed to enhancing the health and well-being of seniors through comprehensive initiatives, including:
               </p>
@@ -52,7 +52,7 @@ export default function HolisticPage() {
           {/* Card 2 - Text Right, Image Left */}
           <div className="grid md:grid-cols-2 gap-12 items-center md:flex-row-reverse">
             <div className="md:order-2">
-              <h2 className="text-3xl font-bold mb-4 text-[#5e6f46]">Social Engagement – Rebuilding Connections</h2>
+              <h2 className="text-3xl font-bold mb-4 text-[#5e6f47]">Social Engagement – Rebuilding Connections</h2>
               <p className="text-lg text-gray-600 mb-4">
                 We strive to foster a sense of belonging and social inclusion among seniors by:
               </p>

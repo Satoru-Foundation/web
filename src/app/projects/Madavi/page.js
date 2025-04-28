@@ -23,7 +23,7 @@ const MadaviPage = () => {
           <div>
             {/* Title and Badge */}
             <div className="mb-6">
-              <span className="inline-block bg-[#ecc54f] text-3xl text-[#5e6f46] font-bold px-4 py-1 rounded-full mb-4">
+              <span className="inline-block bg-[#ecc750] text-3xl text-[#5e6f47] font-bold px-4 py-1 rounded-full mb-4">
                 Madavi
               </span>
               <p className="text-gray-900 mb-6 leading-relaxed text-[20px]">
@@ -44,19 +44,19 @@ const MadaviPage = () => {
           <div className="space-y-6 mt-15">
             {/* Card 1 - Details */}
             <div className="bg-white border shadow-md rounded-xl p-6 space-y-3">
-              <h3 className="text-xl font-semibold text-[#5e6f46]">Duration:</h3>
+              <h3 className="text-xl font-semibold text-[#5e6f47]">Duration:</h3>
               <p>2023–2026</p>
-              <h3 className="text-xl font-semibold text-[#5e6f46]">Location:</h3>
+              <h3 className="text-xl font-semibold text-[#5e6f47]">Location:</h3>
               <p>Telangana & Andhra Pradesh</p>
-              <h3 className="text-xl font-semibold text-[#5e6f46]">Investigators:</h3>
+              <h3 className="text-xl font-semibold text-[#5e6f47]">Investigators:</h3>
               <p>Kanagala Sai Charan</p>
-              <h3 className="text-xl font-semibold text-[#5e6f46]">Contact:</h3>
+              <h3 className="text-xl font-semibold text-[#5e6f47]">Contact:</h3>
               <p className="text-blue-600">info@satorufoundation.org</p>
             </div>
 
             {/* Card 2 - Progress */}
             <div className="bg-white border shadow-md rounded-xl p-6 space-y-3">
-              <h3 className="text-xl font-semibold text-[#5e6f46]">Progress till date</h3>
+              <h3 className="text-xl font-semibold text-[#5e6f47]">Progress till date</h3>
               <p><strong>Team Training:</strong> 20 field data collectors trained</p>
               <p><strong>Data Collection:</strong> Completed in 7 districts</p>
               <p>
@@ -71,7 +71,7 @@ const MadaviPage = () => {
         {/* Button */}
         <div className="mt-16 text-center">
           <Link href={"/contact"}>
-          <Button className="bg-[#ecc54f] hover:bg-yellow-500 text-black px-6 py-3 text-lg font-semibold rounded-full">
+          <Button className="bg-[#ecc750] hover:bg-yellow-500 text-black px-6 py-3 text-lg font-semibold rounded-full">
             REGISTER YOURSELF
           </Button>
           </Link>
