@@ -33,6 +33,7 @@ export default function Footer() {
               <li><Link href="/meenestham" className="hover:text-[#ecc750]">MeeNestham</Link></li>
               <li><Link href="/getinvolved" className="hover:text-[#ecc750]">Get Involved</Link></li>
               <li><Link href="/contact" className="hover:text-[#ecc750]">Contact</Link></li>
+              <li><Link href="/termsandpolicy" className="hover:text-[#ecc750]">Terms and Policy</Link></li>
             </ul>
           </div>
 
