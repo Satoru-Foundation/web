@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function CookieConsent() {
   const [visible, setVisible] = useState(false);
@@ -25,7 +26,8 @@ export default function CookieConsent() {
         We use cookies to improve your experience. You can choose to accept all cookies,
         only the necessary ones, or reject all non-essential cookies.
       </p>
-      <div className="flex flex-col gap-2">
+
+      <div className="flex flex-col gap-2 mb-3">
         <button
           onClick={() => handleConsent("all")}
           className="bg-[#ecc750] text-black font-semibold px-4 py-2 rounded hover:bg-yellow-400 transition"
@@ -45,6 +47,18 @@ export default function CookieConsent() {
           Reject All
         </button>
       </div>
+
+      <p className="text-xs text-gray-600">
+        View our{" "}
+        <Link href="/termsandpolicy" className="text-[#5e6f47] underline hover:text-[#ecc750]">
+          Terms
+        </Link>{" "}
+        and{" "}
+        <Link href="/termsandpolicy" className="text-[#5e6f47] underline hover:text-[#ecc750]">
+          Privacy Policy
+        </Link>
+        .
+      </p>
     </div>
   );
 }
