@@ -9,8 +9,7 @@ import { motion, AnimatePresence } from "framer-motion"
 const navItems = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about",
-    subItems: [{ name: "Media Centre", href: "/mediacentre" }]
-   },
+    subItems: [{ name: "Our Team", href: "/about/ourteam" }]},
   {
     name: "Our Work",
     href: "/ourwork",
@@ -18,7 +17,10 @@ const navItems = [
   },
   { name: "MeeNestham", href: "/meenestham" },
   { name: "Get Involved", href: "/getinvolved" },
-  { name: "Contact Us", href: "/contact" },
+  { name: "Contact Us", 
+    href: "/contact" ,
+    subItems: [{ name: "Media Centre", href: "/mediacentre" }]
+  },
 ]
 
 export default function Navbar() {

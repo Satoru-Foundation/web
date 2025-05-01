@@ -114,16 +114,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-10 md:py-24 bg-gray-50">   {/* Our Team */}
-          <div>
-            <h2 className="text-3xl font-bold mb-8 text-[#5e6f47] text-center">Our Team</h2>
-            <DirectorProfile />
-          </div>
-
-        </section>
-
       {/* Join Our Mission */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">  
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 text-[#5e6f47]">Join Our Mission</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
