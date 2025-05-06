@@ -3,76 +3,45 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Button } from "../components/ui/button";
 import Link from "next/link";
-import SliderComponent from "../components/SliderComponent"; // Import the SliderComponent
-// In your main layout or page where you use the slider:
+import SliderComponent from "../components/SliderComponent";
+import { prisma } from '@/lib/prisma';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+// Add revalidation time (e.g., 1 hour)
+export const revalidate = 3600;
 
-const testimonials = [
-  {
-    name: "Sreeja Dasugari",
-    role: "Intern",
-    qualification:"MSc Biomedical Genetics, VIT, Vellore",
-    image:"/getinvolved/Sreeja.png",
-    content:
-      "As a Research Intern, I had the opportunity to contribute to a significant psychology project under the guidance of Sai Charan sir. I learned about various psychological scales and their applications, as well as essential data analysis techniques. This internship provided me with a unique opportunity to contribute to meaningful research and develop crucial skills that will undoubtedly be beneficial in my future academic and professional pursuits. I am grateful for the valuable mentorship and support provided by Satoru Foundation throughout my internship.",
-  },
-  {
-    name: "Prathyusha Pulugurtha",
-    role: "Intern",
-    qualification:"M.Sc, Clinical Psychology, Christ University",
-    image:"/getinvolved/Prathysha.jpg",
-    content:
-      "I had the distinct pleasure of working with Mr. Sai Charan at Satoru Foundation on a research project focused on the aged population. This collaboration provided me with valuable professional insights and significant personal enrichment. Working with elderly populations presents unique challenges and experiences, all of which were navigated seamlessly under Mr. Sai Charan's guidance. As a mentor and guide, he made the entire research experience both knowledgeable and meaningful",
-  },
-  {
-    name: "Khushbu Yadav",
-    role: "Intern",
-    qualification:"M.Sc, Health Psychology, University of Hyderabad",
-    image:"/getinvolved/Khushbu.jpg",
-    content:
-      "As an intern, I had the privilege of working under the guidance of Sai Charan Sir at Satoru Foundation. The experience was transformative, both personally and professionally. The foundation fosters a collaborative, supportive, and intellectually stimulating environment, emphasizing ethics and empathy in all research endeavors. Under Sir’s mentorship, I gained invaluable hands-on experience in research, enhancing my skills and understanding of the field. His guidance and encouragement played a pivotal role in my growth. I highly recommend Satoru Foundation to anyone seeking to advance their research experience in a professional and nurturing setting dedicated to meaningful psychological insights!",
-  },
-  {
-    name: "Purvi Agarwal",
-    role: "Intern",
-    qualification:"PGD, Psychological Counseling, St Francis College for Women, Hyderabad",
-    image:"/getinvolved/Purvi.jpg",
-    content:
-      "I had a wonderful time interning with the Satoru Foundation under Charan sir. Being part of the research project with him was an incredible experience the kind of exposure one gains is truly remarkable. This research work not only enhanced my skills in analytical thinking and collaboration but also brought me closer to working with an inspiring age group, allowing me to learn so much from older generations. Charan sir’s guidance made the process seamless; his support and vast knowledge were invaluable. I am deeply grateful for this opportunity, which has given me new perspectives and confidence in my abilities.",
-  },
-  {
-    name: "Akhil Kumar Pandula",
-    role: "Intern",
-    qualification:"Hyderabad Public School, M.A Social Work - University of Madras",
-    image:"/getinvolved/Akhil.jpg",
-    content:
-      "Working with the Satoru foundation is a great experience under the guidance of the founder Mr. Sai Charan who is very helpful and resourceful throughout the journey. While working closely with older people I understood how to deal with them on a day to day basis. It helped me to gain knowledge on how to handle research projects. It was also great working with an understanding team who are quick learners without which these learnings are impossible. Altogether it was really a wonderful experience being able to intern at Satoru foundation. I would like to thank the founder once again for this wonderful opportunity.",
-  },
-  {
-    name: "Tulasi Kuchibhotla",
-    role: "Intern",
-    qualification:"M.A Applied Psychology, GITAM University",
-    image:"/getinvolved/Tulasi.jpg",
-    content:
-      "Working with Charan Sir at Satoru Foundation has been an amazing learning experience. The work environment was positive and healthy, thanks to his hospitality, respect for interns, and understanding nature. He created a space where we felt valued and motivated to learn and contribute. I’m genuinely grateful for the guidance and encouragement I received during this journey. Looking forward to work in many more projects.",
-  },
-];
+async function getJobs() {
+  const jobs = await prisma.job.findMany({
+    where: {
+      isActive: true,
+    },
+    orderBy: {
+      createdAt: 'desc',
+    },
+  });
+  return jobs;
+}
 
-const jobOpenings = [
-  {
-    title: "Visual Media Intern",
-    description:
-      "Visual Media Intern",
-    location:"Hyderabad,Telangana",
-    deadline:"30th April 2025",
-    viewLink: "/getinvolved/visualmedia_internship.pdf",
-    applyLink: "https://forms.gle/Fssmm6hkyRVCE63GA",
-  },
-];
+async function getTestimonials() {
+  const testimonials = await prisma.testimonial.findMany({
+    where: {
+      isActive: true,
+    },
+    orderBy: {
+      createdAt: 'desc',
+    },
+  });
+  return testimonials;
+}
 
-const GetInvolved = () => {
+export default async function GetInvolved() {
+  // Fetch data in parallel
+  const [jobOpenings, testimonials] = await Promise.all([
+    getJobs(),
+    getTestimonials(),
+  ]);
+
   return (
     <main className="min-h-screen">
       <Navbar />
@@ -81,7 +50,7 @@ const GetInvolved = () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Get Involved</h1>
           <p className="text-xl max-w-3xl mx-auto">
-            Whether you’re looking to work with us, volunteer your time, or intern to learn and contribute — we welcome you!
+            Whether you're looking to work with us, volunteer your time, or intern to learn and contribute — we welcome you!
           </p>
         </div>
       </section>
@@ -89,11 +58,14 @@ const GetInvolved = () => {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-[#5e6f47] mb-12">Current Openings</h2>
-          <div className="grid md:grid-cols-2 gap-10">
-            {jobOpenings.map((job, index) => (
-              <div key={index} className="p-6 border rounded-xl shadow-md">
-                <h3 className="text-xl text-black font-semibold mb-2">{job.title}</h3>
-                <p className="text-gray-700 mb-4">{job.description}</p>
+          {jobOpenings.length === 0 ? (
+            <div className="text-center text-gray-600">No current openings available.</div>
+          ) : (
+            <div className="grid md:grid-cols-2 gap-10">
+              {jobOpenings.map((job) => (
+                <div key={job.id} className="p-6 border rounded-xl shadow-md">
+                  <h3 className="text-xl text-black font-semibold mb-2">{job.title}</h3>
+                  <p className="text-gray-700 mb-4">{job.description}</p>
 
                   {/* Display Location and Deadline */}
                   <p className="text-gray-500 mb-2">
@@ -103,17 +75,18 @@ const GetInvolved = () => {
                     <strong>Application Deadline:</strong> {job.deadline}
                   </p>
                   <br />
-                <div className="flex gap-4">
-                  <Link href={job.viewLink}>
-                    <Button className="bg-[#ecc750] hover:bg-[#eab308] text-black">View Description</Button>
-                  </Link>
-                  <Link href={job.applyLink}>
-                    <Button className="bg-[#5e6f47] hover:bg-[#5e6f47]/90 text-white">Apply Now</Button>
-                  </Link>
+                  <div className="flex gap-4">
+                    <Link href={job.viewLink}>
+                      <Button className="bg-[#ecc750] hover:bg-[#eab308] text-black">View Description</Button>
+                    </Link>
+                    <Link href={job.applyLink}>
+                      <Button className="bg-[#5e6f47] hover:bg-[#5e6f47]/90 text-white">Apply Now</Button>
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
@@ -138,8 +111,11 @@ const GetInvolved = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl text-[#5e6f47] font-bold text-center mb-12">What Our Interns Say</h2>
           <div className="max-w-4xl mx-auto">
-            {/* Use the SliderComponent here */}
-            <SliderComponent testimonials={testimonials} />
+            {testimonials.length === 0 ? (
+              <div className="text-center text-gray-600">No testimonials available.</div>
+            ) : (
+              <SliderComponent testimonials={testimonials} />
+            )}
           </div>
         </div>
       </section>
@@ -147,6 +123,4 @@ const GetInvolved = () => {
       <Footer />
     </main>
   );
-};
-
-export default GetInvolved;
+}
