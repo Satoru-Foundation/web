@@ -4,12 +4,11 @@ import Footer from "../components/Footer";
 import { Button } from "../components/ui/button";
 import Link from "next/link";
 import SliderComponent from "../components/SliderComponent";
-import { prisma } from '@/lib/prisma';
+import { prisma } from 'lib/prisma';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-// Add revalidation time (e.g., 1 hour)
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 async function getJobs() {
   const jobs = await prisma.job.findMany({

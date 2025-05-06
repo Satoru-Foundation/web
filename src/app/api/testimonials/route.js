@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma';
+import { prisma } from 'lib/prisma';
 
 // Add revalidation time (24 hours)
 export const revalidate = 86400;

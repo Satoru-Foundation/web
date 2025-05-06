@@ -1,11 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { toast } from "sonner";
+import { Button } from "../../components/ui/button";
+import { Textarea } from "../../components/ui/textarea";
 
 export default function AdminTestimonialsPage() {
   const [testimonials, setTestimonials] = useState([]);
@@ -32,7 +29,6 @@ export default function AdminTestimonialsPage() {
       setTestimonials(data);
     } catch (error) {
       console.error('Error fetching testimonials:', error);
-      toast.error('Failed to fetch testimonials');
     } finally {
       setLoading(false);
     }
@@ -67,10 +63,8 @@ export default function AdminTestimonialsPage() {
         content: '',
       });
       setEditingTestimonial(null);
-      toast.success(editingTestimonial ? 'Testimonial updated successfully' : 'Testimonial added successfully');
     } catch (error) {
       console.error('Error saving testimonial:', error);
-      toast.error('Failed to save testimonial');
     }
   };
 
@@ -97,10 +91,8 @@ export default function AdminTestimonialsPage() {
       if (!response.ok) throw new Error('Failed to delete testimonial');
       
       await fetchTestimonials();
-      toast.success('Testimonial deleted successfully');
     } catch (error) {
       console.error('Error deleting testimonial:', error);
-      toast.error('Failed to delete testimonial');
     }
   };
 
@@ -117,10 +109,8 @@ export default function AdminTestimonialsPage() {
       if (!response.ok) throw new Error('Failed to update testimonial status');
       
       await fetchTestimonials();
-      toast.success('Testimonial status updated successfully');
     } catch (error) {
       console.error('Error updating testimonial status:', error);
-      toast.error('Failed to update testimonial status');
     }
   };
 
@@ -250,54 +240,58 @@ export default function AdminTestimonialsPage() {
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-lg p-6 max-w-2xl w-full">
-            <h2 className="text-2xl font-bold mb-4">
+            <h2 className="text-black text-2xl font-bold mb-4 ">
               {editingTestimonial ? 'Edit Testimonial' : 'Add New Testimonial'}
             </h2>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <Label htmlFor="name">Name</Label>
-                <Input
+                <label htmlFor="name" className='text-black'>Name</label>
+                <input
                   id="name"
                   value={formData.name}
+                  className='text-black'
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   required
                 />
               </div>
               <div>
-                <Label htmlFor="role">Role</Label>
-                <Input
+                <label htmlFor="role" className='text-black'>Role</label>
+                <input
                   id="role"
                   value={formData.role}
+                  className='text-black'
                   onChange={(e) => setFormData({ ...formData, role: e.target.value })}
                   required
                 />
               </div>
               <div>
-                <Label htmlFor="qualification">Qualification</Label>
-                <Input
+                <label htmlFor="qualification" className='text-black'>Qualification</label>
+                <input
                   id="qualification"
                   value={formData.qualification}
+                  className='text-black'
                   onChange={(e) => setFormData({ ...formData, qualification: e.target.value })}
                   required
                 />
               </div>
               <div>
-                <Label htmlFor="image">Image URL</Label>
-                <Input
+                <label htmlFor="image" className='text-black'>Image URL</label>
+                <input
                   id="image"
                   value={formData.image}
+                  className='text-black'
                   onChange={(e) => setFormData({ ...formData, image: e.target.value })}
                   required
                 />
               </div>
               <div>
-                <Label htmlFor="content">Content</Label>
+                <label htmlFor="content" className='text-black'>Content</label>
                 <Textarea
                   id="content"
                   value={formData.content}
                   onChange={(e) => setFormData({ ...formData, content: e.target.value })}
                   required
-                  className="min-h-[150px]"
+                  className="min-h-[150px] text-black"
                 />
               </div>
               <div className="flex justify-end space-x-4">
