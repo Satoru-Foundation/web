@@ -16,7 +16,6 @@ const images = [
   "/mediacentre/7.jpg",
   "/mediacentre/8.jpg",
   "/mediacentre/9.jpg",
-  "/mediacentre/10.jpg",
   "/mediacentre/11.jpg",
   "/mediacentre/12.jpg",
   "/mediacentre/13.jpg",
@@ -32,8 +31,6 @@ const images = [
   "/mediacentre/23.jpg",
   "/mediacentre/24.jpg",
   "/mediacentre/25.jpg",
-  "/mediacentre/26.jpg",
-  "/mediacentre/27.jpg",
 ];
 
 export default function MediaCentrePage() {
