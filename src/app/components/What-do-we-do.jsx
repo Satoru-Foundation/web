@@ -30,7 +30,7 @@ const activities = [
     id: 4,
     title: "Rights Awareness",
     image: "/whatdowedo/rights.jpg",
-    oneLiner: "Rights Awareness",
+    oneLiner: "Rights awareness",
     description: "We educate seniors about their rights and welfare schemes through legal awareness workshops and accessible, multilingual resources.",
   },
 ]

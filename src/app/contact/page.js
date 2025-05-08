@@ -23,7 +23,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 max-w-3xl space-y-4 text-base md:text-lg leading-relaxed">
           <p><strong>Organisation Name:</strong> SATORU FOUNDATION™</p>
           <p>Legal Compliance: Non-Profit Organisation, Registered under Section 8 of the Companies Act, 2013,</p>
-          <p>Recognized By Ministry of Corporate Affairs, Government of India,Niti Aayog.</p>
+          <p>Recognized By Ministry of Corporate Affairs, Government of India, Niti Aayog.</p>
           <p>Our main registered office located in Hyderabad, Telangana state, India</p>
           <p><strong>CIN:</strong>  U72200TS2024NPL189603</p>
           <p><strong>Darpan:</strong>  TS/2024/0454519</p>
@@ -72,7 +72,7 @@ export default function ContactPage() {
                 How is my donation used?
               </h3>
               <p className="text-gray-600">
-                The donations are used for senior citizen welfare initiatives and for the improvement of health(physical and mental) and overall wellbeing of senior citizens.
+                The donations are used for senior citizen welfare initiatives and for the improvement of health (physical and mental) and overall wellbeing of senior citizens and marginalized communities.
               </p>
             </div>
             <div>
@@ -88,7 +88,7 @@ export default function ContactPage() {
                 Do I get any tax benefits by donating?
               </h3>
               <p className="text-gray-600">
-                Yes you'll get tax benefits by donating to our organization.
+                Yes you'll get tax benefits by donating to our organization (80G approved organization).
               </p>
             </div>
           </div>

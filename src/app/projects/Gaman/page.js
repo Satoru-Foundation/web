@@ -63,7 +63,7 @@ const MadaviPage = () => {
                 <strong>Telangana:</strong> Hyderabad, Ranga Reddy, Sanga Reddy, Nalgonda
               </p> */}
               <p><strong>Current Status:</strong> Data collection is in progress</p>
-              <p><strong>Impact:</strong>1000</p>
+              <p><strong>Impact:</strong> 1000 people</p>
             </div>
           </div>
         </div>

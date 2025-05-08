@@ -59,7 +59,7 @@ const MadaviPage = () => {
             <div className="bg-white border shadow-md rounded-xl p-6 space-y-3">
               <h3 className="text-xl font-bold text-[#5e6f47]">Progress till date</h3>
               <p><strong>Current Status:</strong> Data collection is in progress</p>
-              <p><strong>Impact:</strong> 200</p>
+              <p><strong>Impact:</strong> 200 people</p>
             </div>
           </div>
         </div>
