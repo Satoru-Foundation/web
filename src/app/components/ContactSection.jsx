@@ -104,6 +104,7 @@ export default function ContactSection() {
                 <div>
                   <h4 className="font-semibold text-[#5e6f47]">Email</h4>
                   <p className="text-gray-600">info@satorufoundation.org</p>
+                  <p className="text-gray-600">satorufoundation@gmail.com</p>
                 </div>
               </div>
             </div>
