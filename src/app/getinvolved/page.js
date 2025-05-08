@@ -12,7 +12,6 @@ import 'slick-carousel/slick/slick-theme.css';
 const testimonials = [
   {
     name: "Sreeja Dasugari",
-    role: "Intern",
     qualification:"MSc Biomedical Genetics, VIT, Vellore",
     image:"/getinvolved/Sreeja.png",
     content:
@@ -20,7 +19,6 @@ const testimonials = [
   },
   {
     name: "Prathyusha Pulugurtha",
-    role: "Intern",
     qualification:"M.Sc, Clinical Psychology, Christ University",
     image:"/getinvolved/Prathysha.jpg",
     content:
@@ -28,7 +26,6 @@ const testimonials = [
   },
   {
     name: "Khushbu Yadav",
-    role: "Intern",
     qualification:"M.Sc, Health Psychology, University of Hyderabad",
     image:"/getinvolved/Khushbu.jpg",
     content:
@@ -36,7 +33,6 @@ const testimonials = [
   },
   {
     name: "Purvi Agarwal",
-    role: "Intern",
     qualification:"PGD, Psychological Counseling, St Francis College for Women, Hyderabad",
     image:"/getinvolved/Purvi.jpg",
     content:
@@ -44,7 +40,6 @@ const testimonials = [
   },
   {
     name: "Akhil Kumar Pandula",
-    role: "Intern",
     qualification:"Hyderabad Public School, M.A Social Work - University of Madras",
     image:"/getinvolved/Akhil.jpg",
     content:
@@ -52,7 +47,6 @@ const testimonials = [
   },
   {
     name: "Tulasi Kuchibhotla",
-    role: "Intern",
     qualification:"M.A Applied Psychology, GITAM University",
     image:"/getinvolved/Tulasi.jpg",
     content:

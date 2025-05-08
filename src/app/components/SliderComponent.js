@@ -44,7 +44,6 @@ const SliderComponent = ({ testimonials }) => {
             <div>
               <h4 className="font-bold text-[#5e6f47]">{t.name}</h4>
               <h4 className="font-semibold text-[#5e6f47]">{t.qualification}</h4>
-              <p className="text-sm text-gray-500">{t.role}</p>
             </div>
           </div>
 
