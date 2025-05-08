@@ -28,7 +28,7 @@ const activities = [
   },
   {
     id: 4,
-    title: "Rights Awareness & Advocacy",
+    title: "Rights Awareness",
     image: "/whatdowedo/rights.jpg",
     oneLiner: "Digital & Financial Literacy Initiatives",
     description: "We educate seniors about their rights and welfare schemes through legal awareness workshops and accessible, multilingual resources.",

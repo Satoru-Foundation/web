@@ -15,7 +15,7 @@ const activities = [
   },
   {
     id: 3,
-    title: "Awareness and Advocacy",
+    title: "Policy and Advocacy",
     image: "/ouractivities-home/awareness.jpg",
   },
 ]
