@@ -57,7 +57,10 @@ export default function Footer() {
             <div className="flex items-center text-white mb-2">
               <Mail className="h-4 w-4 mr-2 text-[#ecc750]" />
               <a href="mailto:info@satorufoundation.org" className="hover:text-[#ecc750]">info@satorufoundation.org</a>
-              <a href="mailto:info@satorufoundation.org" className="hover:text-[#ecc750]">satorufoundation@gmail.com</a>
+            </div>
+            <div className="flex items-center text-white mb-2">
+            <Mail className="h-4 w-4 mr-2 text-[#ecc750]" />
+            <a href="mailto:satorufoundation@gmail.com" className="hover:text-[#ecc750]">satorufoundation@gmail.com</a>
             </div>
             <div className="flex items-center text-white mb-6">
               <Phone className="h-4 w-4 mr-2 text-[#ecc750]" />
