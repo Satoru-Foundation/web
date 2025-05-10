@@ -60,7 +60,7 @@ const jobOpenings = [
     description:
       "Visual Media Intern",
     location:"Hyderabad,Telangana",
-    deadline:"30th April 2025",
+    deadline:"10th May 2025",
     viewLink: "/getinvolved/visualmedia_internship.pdf",
     applyLink: "https://forms.gle/Fssmm6hkyRVCE63GA",
   },
