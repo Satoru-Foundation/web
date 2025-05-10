@@ -26,7 +26,7 @@ export default function OrganizationPolicyPage() {
           <div>
             <h2 className="text-2xl font-semibold text-[#5e6f47] mb-4">Equal Opportunity and Non-Discrimination Policy</h2>
             <p className="mb-4">
-              Satoru Foundation is committed to providing equal opportunities to all individuals irrespective of sex, gender, gender identity or expression, age, caste, religion, colour, race, national origin, ancestry, ethnicity, disability, marital status, sexual orientation, or any other characteristic protected by applicable law.
+             Satoru Foundation is committed to providing equal opportunities to all individuals irrespective of sex, gender, gender identity or expression, age, caste, religion, colour, race, national origin, ancestry, ethnicity, disability, marital status, sexual orientation, or any other characteristic protected by applicable law.
             </p>
             <p className="mb-4">
               The Foundation implements this policy in all aspects of employment including recruitment, hiring, placement, promotion, transfer, compensation, training, and termination. All employees are expected to uphold these principles in all interactions within and on behalf of the Organization.
@@ -39,7 +39,7 @@ export default function OrganizationPolicyPage() {
           <div>
             <h2 className="text-2xl font-semibold text-[#5e6f47] mb-4">Dignity at Work Policy</h2>
             <p className="mb-4">
-              All employees and associates of Satoru Foundation have the right to be treated with dignity and respect. The Foundation is committed to maintaining a work environment free from all forms of harassment, bullying, and discrimination.
+             All employees and associates of Satoru Foundation have the right to be treated with dignity and respect. The Foundation is committed to maintaining a work environment free from all forms of harassment, bullying, and discrimination.
             </p>
             <p className="mb-4">
               Harassment includes unwelcome conduct, whether verbal, physical, or visual, that is based on a person's protected status. Examples include offensive jokes, slurs, physical assaults, threats, intimidation, ridicule, insults, offensive pictures, and interference with work performance.
@@ -54,7 +54,7 @@ export default function OrganizationPolicyPage() {
               </ul>
             </p>
             <p className="mb-4">
-              All complaints will be promptly investigated within 30 days while maintaining confidentiality to the extent possible. Appropriate disciplinary action, up to and including termination, will be taken against individuals found to have violated this policy.
+              All complaints will be promptly investigated within 30 days while maintaining confidentiality to the extent possible. Appropriate disciplinary action, up to and including termination, will be taken against individuals found to have violated this policy
             </p>
             <p>
               Satoru Foundation strictly prohibits retaliation against anyone who reports harassment or participates in an investigation. The Foundation will provide regular training to all employees on preventing and addressing harassment and discrimination.
@@ -63,6 +63,9 @@ export default function OrganizationPolicyPage() {
 
           <div>
             <h2 className="text-2xl font-semibold text-[#5e6f47] mb-4">Internship Policy</h2>
+            <p>
+Satoru Foundation offers structured internship opportunities designed to provide meaningful professional experience and skill development.
+</p>
             <p className="mb-2 font-semibold">Duration and Work Schedule</p>
             <ul className="list-disc pl-6 mb-4">
               <li>Internships range from 3 to 6 months, with a mandatory commitment of 3 months</li>
@@ -105,16 +108,21 @@ export default function OrganizationPolicyPage() {
 
             <p className="mb-2 font-semibold">Completion and Recognition</p>
             <p>
-              To be eligible for an internship certificate and/or a letter of recommendation, interns (part-time or full-time) must complete the full internship duration as specified in their offer letter. Candidate has to submit a completion report detailing their learning outcomes at the end of the internship. Interns who leave the organization before the completion of specified period will not receive these documents (internship certificate and/or a letter of recommendation), except in rare cases of extenuating circumstances for medical/family emergencies. Such exceptions will be considered only upon submission of valid documentation and are subject to management’s written approval.
+              To be eligible for an internship certificate and/or a letter of recommendation, interns (part-time or full-time) must complete the full internship duration as specified in their offer letter. Candidate has to Submit a completion report detailing their learning outcomes at the end of the internship. Interns who leave the organization before the completion of specified period will not receive these documents (internship certificate and/or a letter of recommendation), except in rare cases of extenuating circumstances for medical/family emergencies Such exceptions will be considered only upon submission of valid documentation and are subject to management’s written approval.
             </p>
           </div>
 
           <div>
             <h2 className="text-2xl font-semibold text-[#5e6f47] mb-4">General Termination Policy</h2>
+            <p>The organization “Satoru Foundation” reserves the right to terminate an internship or an employee full-time or part-time with 2 weeks prior notice under the following circumstances:</p>
             <ul className="list-disc pl-6 mb-4">
-              <li>Termination with 2 weeks' notice for policy violations, misconduct, or poor performance</li>
-              <li>Interns/employees may resign with 4 weeks' notice and proper handover</li>
+              <li>Violation of organizational policies, code of conduct, or confidentiality agreements.</li>
+              <li>Consistent underperformance despite feedback and support.</li>
+              <li>Unethical behavior, particularly in interactions with senior citizen beneficiaries.</li>
+              <li>Extended unauthorized absence.</li>
+              <li>Misrepresentation of qualifications or information.</li>
             </ul>
+            <p>Similarly, interns or employees (full time or part-time) may request early termination of their internship or employment position with reasonable notice, mandatory 4 weeks /1 month in advance, and proper handover of assigned responsibilities.</p>
           </div>
 
           <div className="border-t pt-6">
