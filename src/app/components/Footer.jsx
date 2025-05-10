@@ -1,3 +1,5 @@
+'use client';
+
 import Link from "next/link"
 import Image from "next/image"
 import { Facebook, Instagram, Twitter, Youtube, Mail, Phone } from "lucide-react"
@@ -35,6 +37,7 @@ export default function Footer() {
               <li><Link href="/contact" className="hover:text-[#ecc750]">Contact</Link></li>
               <li><Link href="/termsandpolicy" className="hover:text-[#ecc750]">Terms and Policy</Link></li>
               <li><Link href="/legal-compliance" className="hover:text-[#ecc750]">Legal Compliance</Link></li>
+              <li><Link href="/organizational-policy" className="hover:text-[#ecc750]">Organizational Policy</Link></li>
             </ul>
           </div>
 
