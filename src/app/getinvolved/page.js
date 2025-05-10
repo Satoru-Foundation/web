@@ -142,16 +142,10 @@ const GetInvolved = () => {
 
       <section className="py-16 md:py-24 bg-[#fef9ef]">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#5e6f47] text-center mb-8">Organizational Policies</h2>
+          <h2 className="text-3xl font-bold text-[#5e6f47] text-center mb-8">Organisational Policies</h2>
           <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto mb-8">
-            At Satoru Foundation, we are committed to equity, dignity, and professional ethics in all our work and partnerships.
+            At Satoru Foundation, we are committed to equal opportunity and dignity at work.
           </p>
-          <ul className="list-disc pl-6 md:pl-16 text-gray-800 space-y-4 text-base max-w-4xl mx-auto mb-10">
-            <li><strong>Equal Opportunity:</strong> Non-discrimination across identity, background, or status.</li>
-            <li><strong>Dignity at Work:</strong> Zero tolerance for harassment, bullying, or disrespect.</li>
-            <li><strong>Internship Policy:</strong> Transparent selection, skill development, and fair stipends.</li>
-            <li><strong>Termination Policy:</strong> Clear terms for early exit or organizational action.</li>
-          </ul>
           <div className="text-center">
             <Link href="/organizational-policy">
               <Button className="bg-[#5e6f47] text-white hover:bg-[#5e6f47]/90">View Full Policy</Button>

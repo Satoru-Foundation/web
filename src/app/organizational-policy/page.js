@@ -8,14 +8,14 @@ export default function OrganizationPolicyPage() {
   return (
     <>
       <Head>
-        <title>Organizational Policies | Satoru Foundation</title>
+        <title>Organisational Policies | Satoru Foundation</title>
       </Head>
       <main className="min-h-screen bg-white text-gray-800">
         <Navbar />
 
         <section className="bg-[#5e6f47] text-white py-20 text-center">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Organizational Policies</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Organisational Policies</h1>
             <p className="text-xl max-w-3xl mx-auto">
               Upholding dignity, equity, and professionalism in all that we do.
             </p>
@@ -29,7 +29,7 @@ export default function OrganizationPolicyPage() {
              Satoru Foundation is committed to providing equal opportunities to all individuals irrespective of sex, gender, gender identity or expression, age, caste, religion, colour, race, national origin, ancestry, ethnicity, disability, marital status, sexual orientation, or any other characteristic protected by applicable law.
             </p>
             <p className="mb-4">
-              The Foundation implements this policy in all aspects of employment including recruitment, hiring, placement, promotion, transfer, compensation, training, and termination. All employees are expected to uphold these principles in all interactions within and on behalf of the Organization.
+              The Foundation implements this policy in all aspects of employment including recruitment, hiring, placement, promotion, transfer, compensation, training, and termination. All employees are expected to uphold these principles in all interactions within and on behalf of the Organisation.
             </p>
             <p className="mb-4">
               Satoru Foundation prohibits retaliation against any individual who reports discrimination or participates in an investigation of such reports. Violations of this policy will be subject to disciplinary action, up to and including termination of employment. The Foundation will regularly monitor, assess, and report on its equal opportunity performance and make necessary adjustments to policies and practices to promote equity and inclusion.
@@ -86,7 +86,7 @@ Satoru Foundation offers structured internship opportunities designed to provide
               <li>Each intern will be assigned a dedicated supervisor and mentor</li>
               <li>Structured orientation and onboarding program</li>
               <li>Regular feedback sessions and formal mid-term and final evaluations</li>
-              <li>Opportunities to participate in organizational events and professional development activities</li>
+              <li>Opportunities to participate in organisational events and professional development activities</li>
               <li>Projects aligned with intern's educational background and career goals</li>
             </ul>
 
@@ -94,7 +94,7 @@ Satoru Foundation offers structured internship opportunities designed to provide
             <ul className="list-disc pl-6 mb-4">
               <li>Clear job descriptions with specific qualifications and responsibilities</li>
               <li>Transparent application and interview process</li>
-              <li>Selection based on qualifications, skills, and alignment with organizational needs</li>
+              <li>Selection based on qualifications, skills, and alignment with organisational needs</li>
               <li>Commitment to diversity and inclusion in intern recruitment</li>
             </ul>
 
@@ -108,15 +108,15 @@ Satoru Foundation offers structured internship opportunities designed to provide
 
             <p className="mb-2 font-semibold">Completion and Recognition</p>
             <p>
-              To be eligible for an internship certificate and/or a letter of recommendation, interns (part-time or full-time) must complete the full internship duration as specified in their offer letter. Candidate has to Submit a completion report detailing their learning outcomes at the end of the internship. Interns who leave the organization before the completion of specified period will not receive these documents (internship certificate and/or a letter of recommendation), except in rare cases of extenuating circumstances for medical/family emergencies Such exceptions will be considered only upon submission of valid documentation and are subject to management’s written approval.
+              To be eligible for an internship certificate and/or a letter of recommendation, interns (part-time or full-time) must complete the full internship duration as specified in their offer letter. Candidate has to submit a completion report detailing their learning outcomes at the end of the internship. Interns who leave the organisation before the completion of specified period will not receive these documents (internship certificate and/or a letter of recommendation), except in rarecases of extenuating circumstances for medical/family emergencies Such exceptions will be considered only upon submission of valid documentation and are subject to management’s written approval.
             </p>
           </div>
 
           <div>
             <h2 className="text-2xl font-semibold text-[#5e6f47] mb-4">General Termination Policy</h2>
-            <p>The organization “Satoru Foundation” reserves the right to terminate an internship or an employee full-time or part-time with 2 weeks prior notice under the following circumstances:</p>
+            <p>The organisation “Satoru Foundation” reserves the right to terminate an internship or an employee full-time or part-time with 2 weeks prior notice under the following circumstances:</p>
             <ul className="list-disc pl-6 mb-4">
-              <li>Violation of organizational policies, code of conduct, or confidentiality agreements.</li>
+              <li>Violation of organisational policies, code of conduct, or confidentiality agreements.</li>
               <li>Consistent underperformance despite feedback and support.</li>
               <li>Unethical behavior, particularly in interactions with senior citizen beneficiaries.</li>
               <li>Extended unauthorized absence.</li>
@@ -127,7 +127,7 @@ Satoru Foundation offers structured internship opportunities designed to provide
 
           <div className="border-t pt-6">
             <p className="text-sm text-gray-600">
-              For further information on organizational policies, email:{" "}
+              For further information on organisational policies, email:{" "}
               <a href="mailto:jobs@satorufoundation.org" className="text-[#5e6f47] font-medium hover:underline">
                 jobs@satorufoundation.org
               </a>
