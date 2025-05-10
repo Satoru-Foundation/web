@@ -29,65 +29,83 @@ export default function OrganizationPolicyPage() {
               Satoru Foundation is committed to providing equal opportunities to all individuals irrespective of sex, gender, gender identity or expression, age, caste, religion, colour, race, national origin, ancestry, ethnicity, disability, marital status, sexual orientation, or any other characteristic protected by applicable law.
             </p>
             <p className="mb-4">
-              This applies to all aspects of employment including recruitment, hiring, placement, promotion, compensation, training, and termination. Retaliation against individuals who report discrimination or participate in investigations is strictly prohibited.
+              The Foundation implements this policy in all aspects of employment including recruitment, hiring, placement, promotion, transfer, compensation, training, and termination. All employees are expected to uphold these principles in all interactions within and on behalf of the Organization.
             </p>
-            <p>
-              Violations of this policy will result in disciplinary action. The Foundation regularly reviews its policies to ensure equity and inclusion.
+            <p className="mb-4">
+              Satoru Foundation prohibits retaliation against any individual who reports discrimination or participates in an investigation of such reports. Violations of this policy will be subject to disciplinary action, up to and including termination of employment. The Foundation will regularly monitor, assess, and report on its equal opportunity performance and make necessary adjustments to policies and practices to promote equity and inclusion.
             </p>
           </div>
 
           <div>
             <h2 className="text-2xl font-semibold text-[#5e6f47] mb-4">Dignity at Work Policy</h2>
             <p className="mb-4">
-              All employees and associates have the right to be treated with dignity. Harassment—including verbal, physical, or visual conduct based on protected status—is not tolerated.
+              All employees and associates of Satoru Foundation have the right to be treated with dignity and respect. The Foundation is committed to maintaining a work environment free from all forms of harassment, bullying, and discrimination.
             </p>
             <p className="mb-4">
-              Report any misconduct to:
+              Harassment includes unwelcome conduct, whether verbal, physical, or visual, that is based on a person's protected status. Examples include offensive jokes, slurs, physical assaults, threats, intimidation, ridicule, insults, offensive pictures, and interference with work performance.
+            </p>
+            <p className="mb-4">
+              Employees who experience or witness inappropriate behaviour are encouraged to report it immediately through one of the following channels:
               <ul className="list-disc pl-6">
-                <li>Direct supervisor (unless involved)</li>
-                <li>HR department</li>
-                <li>Dignity at Work focal person</li>
+                <li>Direct supervisor (unless they are the subject of the complaint)</li>
+                <li>Human Resources department</li>
+                <li>Designated Dignity at Work focal person</li>
                 <li>Confidential reporting mechanism</li>
               </ul>
             </p>
+            <p className="mb-4">
+              All complaints will be promptly investigated within 30 days while maintaining confidentiality to the extent possible. Appropriate disciplinary action, up to and including termination, will be taken against individuals found to have violated this policy.
+            </p>
             <p>
-              Investigations are conducted within 30 days, and appropriate actions are taken. Retaliation is prohibited.
+              Satoru Foundation strictly prohibits retaliation against anyone who reports harassment or participates in an investigation. The Foundation will provide regular training to all employees on preventing and addressing harassment and discrimination.
             </p>
           </div>
 
           <div>
             <h2 className="text-2xl font-semibold text-[#5e6f47] mb-4">Internship Policy</h2>
-            <p className="mb-2 font-semibold">Duration and Schedule</p>
+            <p className="mb-2 font-semibold">Duration and Work Schedule</p>
             <ul className="list-disc pl-6 mb-4">
-              <li>Internships: 3–6 months (minimum 3 months)</li>
-              <li>25–40 hours/week, Monday–Saturday</li>
-              <li>Flexibility based on projects and academics</li>
+              <li>Internships range from 3 to 6 months, with a mandatory commitment of 3 months</li>
+              <li>Standard work week of 25-40 hours depending on the position and educational requirements</li>
+              <li>Work schedule Monday through Saturday, with occasional weekend activities as needed</li>
+              <li>Flexible working arrangements may be considered based on project requirements and intern's educational commitments</li>
             </ul>
 
             <p className="mb-2 font-semibold">Compensation and Benefits</p>
             <ul className="list-disc pl-6 mb-4">
-              <li>Monthly stipend based on skills, time, and role</li>
-              <li>No administrative or placement fee</li>
+              <li>All interns will receive a monthly stipend (depending on availability of resources) based on hours worked and position requirements, skill, and experience</li>
+              <li>Stipend rates will be clearly communicated during the application process</li>
+              <li>No fees are charged for internship placement or administration</li>
             </ul>
 
             <p className="mb-2 font-semibold">Professional Development</p>
             <ul className="list-disc pl-6 mb-4">
-              <li>Dedicated supervisor and mentor</li>
-              <li>Orientation, feedback, and evaluations</li>
-              <li>Projects aligned with intern goals</li>
+              <li>Each intern will be assigned a dedicated supervisor and mentor</li>
+              <li>Structured orientation and onboarding program</li>
+              <li>Regular feedback sessions and formal mid-term and final evaluations</li>
+              <li>Opportunities to participate in organizational events and professional development activities</li>
+              <li>Projects aligned with intern's educational background and career goals</li>
             </ul>
 
-            <p className="mb-2 font-semibold">Selection and Completion</p>
+            <p className="mb-2 font-semibold">Selection Process</p>
             <ul className="list-disc pl-6 mb-4">
-              <li>Transparent recruitment</li>
-              <li>Diversity-focused selection</li>
-              <li>Certificate and recommendation letter upon successful completion</li>
-              <li>Completion report required</li>
+              <li>Clear job descriptions with specific qualifications and responsibilities</li>
+              <li>Transparent application and interview process</li>
+              <li>Selection based on qualifications, skills, and alignment with organizational needs</li>
+              <li>Commitment to diversity and inclusion in intern recruitment</li>
             </ul>
 
-            <p className="mb-2 font-semibold">Early Exit Policy</p>
+            <p className="mb-2 font-semibold">Completion and Recognition</p>
+            <ul className="list-disc pl-6 mb-4">
+              <li>Internship certificate provided upon successful completion</li>
+              <li>Letter of recommendation for interns meeting or exceeding performance standards</li>
+              <li>Exit interview to gather feedback and improve the internship program</li>
+              <li>Consideration for future employment opportunities when available</li>
+            </ul>
+
+            <p className="mb-2 font-semibold">Completion and Recognition</p>
             <p>
-              Interns leaving early without valid reasons won't receive documentation. Exceptions for emergencies require valid proof and management approval.
+              To be eligible for an internship certificate and/or a letter of recommendation, interns (part-time or full-time) must complete the full internship duration as specified in their offer letter. Candidate has to submit a completion report detailing their learning outcomes at the end of the internship. Interns who leave the organization before the completion of specified period will not receive these documents (internship certificate and/or a letter of recommendation), except in rare cases of extenuating circumstances for medical/family emergencies. Such exceptions will be considered only upon submission of valid documentation and are subject to management’s written approval.
             </p>
           </div>
 
