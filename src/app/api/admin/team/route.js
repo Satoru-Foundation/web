@@ -33,10 +33,10 @@ export async function POST(request) {
     }
 
     const data = await request.json();
-    const { name, position, bio, image, email, linkedin, twitter, github } = data;
+    const { name, position, bio, image, imageType, email, linkedin, twitter, github } = data;
 
     // Validate required fields
-    if (!name || !position || !bio || !image) {
+    if (!name || !position || !bio || !image || !imageType) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -49,6 +49,7 @@ export async function POST(request) {
         position,
         bio,
         image,
+        imageType,
         email,
         linkedin,
         twitter,

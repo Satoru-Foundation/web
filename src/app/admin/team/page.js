@@ -13,11 +13,14 @@ export default function AdminTeamPage() {
     position: '',
     bio: '',
     image: '',
+    imageType: '',
     email: '',
     linkedin: '',
     twitter: '',
     github: '',
   });
+  const [imagePreview, setImagePreview] = useState('');
+  const [uploading, setUploading] = useState(false);
   const [editingMember, setEditingMember] = useState(null);
   const router = useRouter();
 
@@ -62,11 +65,13 @@ export default function AdminTeamPage() {
         position: '',
         bio: '',
         image: '',
+        imageType: '',
         email: '',
         linkedin: '',
         twitter: '',
         github: '',
       });
+      setImagePreview('');
       setEditingMember(null);
     } catch (error) {
       console.error('Error saving team member:', error);
@@ -80,11 +85,13 @@ export default function AdminTeamPage() {
       position: member.position,
       bio: member.bio,
       image: member.image,
+      imageType: member.imageType,
       email: member.email || '',
       linkedin: member.linkedin || '',
       twitter: member.twitter || '',
       github: member.github || '',
     });
+    setImagePreview(member.image);
     setShowModal(true);
   };
 
@@ -120,6 +127,39 @@ export default function AdminTeamPage() {
     }
   };
 
+  const handleImageUpload = async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    setUploading(true);
+    try {
+      const formData = new FormData();
+      formData.append('file', file);
+
+      const response = await fetch('/api/admin/upload', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to upload image');
+      }
+
+      const data = await response.json();
+      setFormData(prev => ({
+        ...prev,
+        image: data.image,
+        imageType: data.imageType
+      }));
+      setImagePreview(data.image);
+    } catch (error) {
+      console.error('Error uploading image:', error);
+      alert('Failed to upload image. Please try again.');
+    } finally {
+      setUploading(false);
+    }
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen bg-white p-8">
@@ -141,11 +181,13 @@ export default function AdminTeamPage() {
                 position: '',
                 bio: '',
                 image: '',
+                imageType: '',
                 email: '',
                 linkedin: '',
                 twitter: '',
                 github: '',
               });
+              setImagePreview('');
               setShowModal(true);
             }}
             className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800"
@@ -266,14 +308,24 @@ export default function AdminTeamPage() {
                 />
               </div>
               <div>
-                <label className="block text-black mb-2">Image URL</label>
+                <label className="block text-black mb-2">Image</label>
                 <input
-                  type="text"
-                  value={formData.image}
-                  onChange={(e) => setFormData({ ...formData, image: e.target.value })}
+                  type="file"
+                  accept="image/*"
+                  onChange={handleImageUpload}
                   className="w-full p-2 border border-gray-300 rounded text-black"
-                  required
+                  disabled={uploading}
                 />
+                {uploading && <p className="text-gray-600 mt-2">Uploading...</p>}
+                {imagePreview && (
+                  <div className="mt-4">
+                    <img
+                      src={imagePreview}
+                      alt="Preview"
+                      className="w-32 h-32 object-cover rounded"
+                    />
+                  </div>
+                )}
               </div>
               <div>
                 <label className="block text-black mb-2">Email</label>

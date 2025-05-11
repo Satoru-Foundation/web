@@ -50,7 +50,8 @@ model Team {
   name        String
   position    String
   bio         String
-  image       String
+  image       String   // This will store the base64 image data
+  imageType   String   // This will store the image MIME type (e.g., 'image/jpeg', 'image/png')
   email       String?
   linkedin    String?
   twitter     String?
