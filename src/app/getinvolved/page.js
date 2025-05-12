@@ -1,4 +1,3 @@
-// src/app/getinvolved/page.js
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Button } from "../components/ui/button";
@@ -66,20 +65,41 @@ export default async function GetInvolved() {
                   <h3 className="text-xl text-black font-semibold mb-2">{job.title}</h3>
                   <p className="text-gray-700 mb-4">{job.description}</p>
 
-                  {/* Display Location and Deadline */}
-                  <p className="text-gray-500 mb-2">
-                    <strong>Location:</strong> {job.location}
-                  </p>
-                  <p className="text-gray-500">
-                    <strong>Application Deadline:</strong> {job.deadline}
-                  </p>
-                  <br />
+                  {/* Display Job Details */}
+                  <div className="space-y-2 mb-4">
+                    <p className="text-gray-500">
+                      <strong>Location:</strong> {job.location}
+                    </p>
+                    <p className="text-gray-500">
+                      <strong>Type:</strong> {job.type}
+                    </p>
+                    <p className="text-gray-500">
+                      <strong>Requirements:</strong> {job.requirements}
+                    </p>
+                    {job.salary && (
+                      <p className="text-gray-500">
+                        <strong>Salary:</strong> {job.salary}
+                      </p>
+                    )}
+                    <p className="text-gray-500">
+                      <strong>Application Deadline:</strong> {job.deadline}
+                    </p>
+                  </div>
+
                   <div className="flex gap-4">
-                    <Link href={job.viewLink}>
-                      <Button className="bg-[#ecc750] hover:bg-[#eab308] text-black">View Description</Button>
-                    </Link>
+                    <a 
+                      href={`data:${job.pdfType};base64,${job.pdfBase64}`}
+                      download={`${job.title.replace(/\s+/g, '_')}_description.pdf`}
+                      className="inline-block"
+                    >
+                      <Button className="bg-[#ecc750] hover:bg-[#eab308] text-black">
+                        Download PDF
+                      </Button>
+                    </a>
                     <Link href={job.applyLink}>
-                      <Button className="bg-[#5e6f47] hover:bg-[#5e6f47]/90 text-white">Apply Now</Button>
+                      <Button className="bg-[#5e6f47] hover:bg-[#5e6f47]/90 text-white">
+                        Apply Now
+                      </Button>
                     </Link>
                   </div>
                 </div>

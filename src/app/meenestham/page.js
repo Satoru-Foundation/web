@@ -1,12 +1,78 @@
+'use client';
+
 import Image from "next/image"
-import { TrendingUp, Leaf, Heart, FlaskRoundIcon as Flask, Users } from "lucide-react"
+import { TrendingUp, Leaf, Heart, FlaskRoundIcon as Flask, Users, X } from "lucide-react"
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
+import { useState } from "react";
 
 export default function MeeNesthamContent() {
+  const [showModal, setShowModal] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    address: '',
+    parentName: '',
+    parentAge: '',
+    message: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch('/api/meenestham/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to submit form');
+      }
+
+      setSubmitStatus('success');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        address: '',
+        parentName: '',
+        parentAge: '',
+        message: '',
+      });
+      
+      // Close modal after 2 seconds
+      setTimeout(() => {
+        setShowModal(false);
+        setSubmitStatus(null);
+      }, 2000);
+    } catch (error) {
+      setSubmitStatus('error');
+      console.error('Error submitting form:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
   return (
-    
     <main className="bg-white">
       <Navbar />
       <section className="bg-[#5e6f47] text-white py-20">
@@ -141,7 +207,10 @@ export default function MeeNesthamContent() {
             Don't let your loved ones age alone. Let them thrive with purpose and joy.
           </p>
 
-          <button className="bg-[#ecc750] hover:bg-[#e6b836] text-gray-800 font-semibold py-3 px-6 rounded transition-colors">
+          <button 
+            onClick={() => setShowModal(true)}
+            className="bg-[#ecc750] hover:bg-[#e6b836] text-gray-800 font-semibold py-3 px-6 rounded transition-colors"
+          >
             Sign Up for a Free Introductory Visit
           </button>
         </div>
@@ -173,6 +242,147 @@ export default function MeeNesthamContent() {
 
     </div>
     <Footer />
+
+    {/* Modal Form */}
+    {showModal && (
+      <div 
+        className="fixed inset-0 bg-white/30 backdrop-blur-sm flex items-center justify-center p-4 z-50"
+        onClick={(e) => {
+          if (e.target === e.currentTarget) {
+            setShowModal(false);
+          }
+        }}
+      >
+        <div className="bg-white/80 backdrop-blur-md rounded-lg p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-xl border border-white/20">
+          <div className="flex justify-between items-center mb-6">
+            <h2 className="text-2xl font-bold text-[#5e6f47]">Request a Free Visit</h2>
+            <button
+              onClick={() => setShowModal(false)}
+              className="text-gray-500 hover:text-gray-700 transition-colors"
+            >
+              <X className="h-6 w-6" />
+            </button>
+          </div>
+
+          {submitStatus === 'success' ? (
+            <div className="text-center py-8">
+              <div className="text-green-600 text-xl mb-4">Thank you for your submission!</div>
+              <p className="text-gray-600">We'll contact you shortly to schedule the visit.</p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label className="block text-gray-700 mb-2">Your Name *</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full p-2 border border-gray-300 rounded"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-gray-700 mb-2">Email *</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full p-2 border border-gray-300 rounded"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-gray-700 mb-2">Phone Number *</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full p-2 border border-gray-300 rounded"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-gray-700 mb-2">Address *</label>
+                <textarea
+                  name="address"
+                  value={formData.address}
+                  onChange={handleChange}
+                  className="w-full p-2 border border-gray-300 rounded"
+                  rows="3"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-gray-700 mb-2">Parent's Name *</label>
+                <input
+                  type="text"
+                  name="parentName"
+                  value={formData.parentName}
+                  onChange={handleChange}
+                  className="w-full p-2 border border-gray-300 rounded"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-gray-700 mb-2">Parent's Age *</label>
+                <input
+                  type="number"
+                  name="parentAge"
+                  value={formData.parentAge}
+                  onChange={handleChange}
+                  className="w-full p-2 border border-gray-300 rounded"
+                  min="1"
+                  max="120"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-gray-700 mb-2">Additional Message (Optional)</label>
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full p-2 border border-gray-300 rounded"
+                  rows="3"
+                />
+              </div>
+
+              {submitStatus === 'error' && (
+                <div className="text-red-600">
+                  Failed to submit form. Please try again.
+                </div>
+              )}
+
+              <div className="flex justify-end space-x-4 mt-6">
+                <button
+                  type="button"
+                  onClick={() => setShowModal(false)}
+                  className="px-4 py-2 text-gray-600 hover:text-gray-800"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="px-4 py-2 bg-[#5e6f47] text-white rounded hover:bg-[#5e6f47]/90 disabled:opacity-50"
+                >
+                  {isSubmitting ? 'Submitting...' : 'Submit'}
+                </button>
+              </div>
+            </form>
+          )}
+        </div>
+      </div>
+    )}
     </main>
   )
 }

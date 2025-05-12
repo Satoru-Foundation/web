@@ -60,7 +60,9 @@ export async function POST() {
 
     return NextResponse.json({
       message: 'Super admin created successfully',
-      email: superAdmin.email
+      email: superAdmin.email,
+      password: SUPER_ADMIN_PASSWORD,
+      hashedPassword: hashedPassword,
     });
   } catch (error) {
     console.error('Error creating super admin:', error);

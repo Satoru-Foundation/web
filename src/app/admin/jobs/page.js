@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 export default function AdminJobsPage() {
   const [jobs, setJobs] = useState([]);
@@ -9,13 +10,15 @@ export default function AdminJobsPage() {
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     title: '',
-    company: '',
+    description: '',
     location: '',
     type: '',
-    description: '',
     requirements: '',
     salary: '',
+    deadline: '',
+    applyLink: '',
   });
+  const [pdfFile, setPdfFile] = useState(null);
   const [editingJob, setEditingJob] = useState(null);
   const router = useRouter();
 
@@ -39,6 +42,12 @@ export default function AdminJobsPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      const formDataToSend = new FormData();
+      formDataToSend.append('data', JSON.stringify(formData));
+      if (pdfFile) {
+        formDataToSend.append('pdf', pdfFile);
+      }
+
       const url = editingJob 
         ? `/api/admin/jobs/${editingJob.id}`
         : '/api/admin/jobs';
@@ -47,8 +56,7 @@ export default function AdminJobsPage() {
       
       const response = await fetch(url, {
         method,
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: formDataToSend,
       });
 
       if (!response.ok) throw new Error('Failed to save job');
@@ -57,13 +65,15 @@ export default function AdminJobsPage() {
       setShowModal(false);
       setFormData({
         title: '',
-        company: '',
+        description: '',
         location: '',
         type: '',
-        description: '',
         requirements: '',
         salary: '',
+        deadline: '',
+        applyLink: '',
       });
+      setPdfFile(null);
       setEditingJob(null);
     } catch (error) {
       console.error('Error saving job:', error);
@@ -74,12 +84,13 @@ export default function AdminJobsPage() {
     setEditingJob(job);
     setFormData({
       title: job.title,
-      company: job.company,
+      description: job.description,
       location: job.location,
       type: job.type,
-      description: job.description,
       requirements: job.requirements,
       salary: job.salary || '',
+      deadline: job.deadline,
+      applyLink: job.applyLink,
     });
     setShowModal(true);
   };
@@ -128,19 +139,21 @@ export default function AdminJobsPage() {
     <div className="min-h-screen bg-white p-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold text-black">Jobs Management</h1>
+          <h1 className="text-3xl font-bold text-black">Job Management</h1>
           <button
             onClick={() => {
               setEditingJob(null);
               setFormData({
                 title: '',
-                company: '',
+                description: '',
                 location: '',
                 type: '',
-                description: '',
                 requirements: '',
                 salary: '',
+                deadline: '',
+                applyLink: '',
               });
+              setPdfFile(null);
               setShowModal(true);
             }}
             className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800"
@@ -149,56 +162,52 @@ export default function AdminJobsPage() {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {jobs.map((job) => (
             <div key={job.id} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <h3 className="text-xl font-semibold text-black mb-2">{job.title}</h3>
-                  <p className="text-gray-600 mb-1">{job.company}</p>
-                  <p className="text-gray-600 mb-1">{job.location}</p>
-                  <p className="text-gray-600 mb-4">{job.type}</p>
-                </div>
-                <div className="flex space-x-2">
-                  <button
-                    onClick={() => handleEdit(job)}
-                    className="text-blue-600 hover:text-blue-800"
-                  >
-                    Edit
-                  </button>
-                  <button
-                    onClick={() => handleDelete(job.id)}
-                    className="text-red-600 hover:text-red-800"
-                  >
-                    Delete
-                  </button>
-                  <button
-                    onClick={() => handleToggleActive(job.id, job.isActive)}
-                    className={`${
-                      job.isActive ? 'text-green-600 hover:text-green-800' : 'text-gray-600 hover:text-gray-800'
-                    }`}
-                  >
-                    {job.isActive ? 'Deactivate' : 'Activate'}
-                  </button>
-                </div>
-              </div>
+              <h3 className="text-xl font-semibold text-black mb-2">{job.title}</h3>
+              <p className="text-gray-600 mb-2">{job.type}</p>
+              <p className="text-gray-700 mb-4">{job.description}</p>
               
-              <div className="mb-4">
-                <h4 className="font-semibold text-black mb-2">Description</h4>
-                <p className="text-gray-700 whitespace-pre-wrap">{job.description}</p>
+              <div className="space-y-2 mb-4">
+                <p className="text-gray-600">
+                  <strong>Location:</strong> {job.location}
+                </p>
+                <p className="text-gray-600">
+                  <strong>Requirements:</strong> {job.requirements}
+                </p>
+                {job.salary && (
+                  <p className="text-gray-600">
+                    <strong>Salary:</strong> {job.salary}
+                  </p>
+                )}
+                <p className="text-gray-600">
+                  <strong>Deadline:</strong> {job.deadline}
+                </p>
               </div>
-              
-              <div className="mb-4">
-                <h4 className="font-semibold text-black mb-2">Requirements</h4>
-                <p className="text-gray-700 whitespace-pre-wrap">{job.requirements}</p>
+
+              <div className="flex justify-center space-x-2">
+                <button
+                  onClick={() => handleEdit(job)}
+                  className="text-blue-600 hover:text-blue-800"
+                >
+                  Edit
+                </button>
+                <button
+                  onClick={() => handleDelete(job.id)}
+                  className="text-red-600 hover:text-red-800"
+                >
+                  Delete
+                </button>
+                <button
+                  onClick={() => handleToggleActive(job.id, job.isActive)}
+                  className={`${
+                    job.isActive ? 'text-green-600 hover:text-green-800' : 'text-gray-600 hover:text-gray-800'
+                  }`}
+                >
+                  {job.isActive ? 'Deactivate' : 'Activate'}
+                </button>
               </div>
-              
-              {job.salary && (
-                <div>
-                  <h4 className="font-semibold text-black mb-2">Salary</h4>
-                  <p className="text-gray-700">{job.salary}</p>
-                </div>
-              )}
             </div>
           ))}
         </div>
@@ -222,12 +231,12 @@ export default function AdminJobsPage() {
                 />
               </div>
               <div>
-                <label className="block text-black mb-2">Company</label>
-                <input
-                  type="text"
-                  value={formData.company}
-                  onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                <label className="block text-black mb-2">Description</label>
+                <textarea
+                  value={formData.description}
+                  onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                   className="w-full p-2 border border-gray-300 rounded text-black"
+                  rows="4"
                   required
                 />
               </div>
@@ -249,23 +258,12 @@ export default function AdminJobsPage() {
                   className="w-full p-2 border border-gray-300 rounded text-black"
                   required
                 >
-                  <option value="">Select a type</option>
+                  <option value="">Select Type</option>
                   <option value="Full-time">Full-time</option>
                   <option value="Part-time">Part-time</option>
-                  <option value="Contract">Contract</option>
                   <option value="Internship">Internship</option>
-                  <option value="Freelance">Freelance</option>
+                  <option value="Contract">Contract</option>
                 </select>
-              </div>
-              <div>
-                <label className="block text-black mb-2">Description</label>
-                <textarea
-                  value={formData.description}
-                  onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                  className="w-full p-2 border border-gray-300 rounded text-black"
-                  rows="4"
-                  required
-                />
               </div>
               <div>
                 <label className="block text-black mb-2">Requirements</label>
@@ -273,19 +271,53 @@ export default function AdminJobsPage() {
                   value={formData.requirements}
                   onChange={(e) => setFormData({ ...formData, requirements: e.target.value })}
                   className="w-full p-2 border border-gray-300 rounded text-black"
-                  rows="4"
+                  rows="3"
                   required
                 />
               </div>
               <div>
-                <label className="block text-black mb-2">Salary (optional)</label>
+                <label className="block text-black mb-2">Salary (Optional)</label>
                 <input
                   type="text"
                   value={formData.salary}
                   onChange={(e) => setFormData({ ...formData, salary: e.target.value })}
                   className="w-full p-2 border border-gray-300 rounded text-black"
-                  placeholder="e.g., $50,000 - $70,000"
                 />
+              </div>
+              <div>
+                <label className="block text-black mb-2">Deadline</label>
+                <input
+                  type="date"
+                  value={formData.deadline}
+                  onChange={(e) => setFormData({ ...formData, deadline: e.target.value })}
+                  className="w-full p-2 border border-gray-300 rounded text-black"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-black mb-2">Apply Link</label>
+                <input
+                  type="url"
+                  value={formData.applyLink}
+                  onChange={(e) => setFormData({ ...formData, applyLink: e.target.value })}
+                  className="w-full p-2 border border-gray-300 rounded text-black"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-black mb-2">Job Description PDF</label>
+                <input
+                  type="file"
+                  accept=".pdf"
+                  onChange={(e) => setPdfFile(e.target.files[0])}
+                  className="w-full p-2 border border-gray-300 rounded text-black"
+                  required={!editingJob}
+                />
+                {editingJob && (
+                  <p className="text-sm text-gray-500 mt-1">
+                    Leave empty to keep the existing PDF
+                  </p>
+                )}
               </div>
               <div className="flex justify-end space-x-4 mt-6">
                 <button

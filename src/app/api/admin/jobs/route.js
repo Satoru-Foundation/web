@@ -18,10 +18,7 @@ export async function GET() {
     return NextResponse.json(jobs);
   } catch (error) {
     console.error('Error fetching jobs:', error);
-    return NextResponse.json(
-      { error: 'Internal Server Error' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Failed to fetch jobs' }, { status: 500 });
   }
 }
 
@@ -32,35 +29,64 @@ export async function POST(request) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const data = await request.json();
-    const { title, company, location, type, description, requirements, salary } = data;
+    const formData = await request.formData();
+    const data = JSON.parse(formData.get('data'));
+    const pdfFile = formData.get('pdf');
 
-    // Validate required fields
-    if (!title || !company || !location || !type || !description || !requirements) {
-      return NextResponse.json(
-        { error: 'Missing required fields' },
-        { status: 400 }
-      );
+    if (!pdfFile) {
+      return NextResponse.json({ error: 'PDF file is required' }, { status: 400 });
     }
+
+    // Convert PDF file to base64
+    const arrayBuffer = await pdfFile.arrayBuffer();
+    const buffer = Buffer.from(arrayBuffer);
+    const base64Data = buffer.toString('base64');
 
     const job = await prisma.job.create({
       data: {
-        title,
-        company,
-        location,
-        type,
-        description,
-        requirements,
-        salary,
+        ...data,
+        pdfBase64: base64Data,
+        pdfType: pdfFile.type,
       },
     });
 
     return NextResponse.json(job);
   } catch (error) {
     console.error('Error creating job:', error);
-    return NextResponse.json(
-      { error: 'Internal Server Error' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Failed to create job' }, { status: 500 });
+  }
+}
+
+export async function PATCH(request) {
+  try {
+    const { searchParams } = new URL(request.url);
+    const id = searchParams.get('id');
+    const data = await request.json();
+
+    const job = await prisma.job.update({
+      where: { id },
+      data,
+    });
+
+    return NextResponse.json(job);
+  } catch (error) {
+    console.error('Error updating job:', error);
+    return NextResponse.json({ error: 'Failed to update job' }, { status: 500 });
+  }
+}
+
+export async function DELETE(request) {
+  try {
+    const { searchParams } = new URL(request.url);
+    const id = searchParams.get('id');
+
+    await prisma.job.delete({
+      where: { id },
+    });
+
+    return NextResponse.json({ message: 'Job deleted successfully' });
+  } catch (error) {
+    console.error('Error deleting job:', error);
+    return NextResponse.json({ error: 'Failed to delete job' }, { status: 500 });
   }
 } 
