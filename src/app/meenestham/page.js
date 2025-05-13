@@ -79,7 +79,7 @@ export default function MeeNesthamContent() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Mee Nestham</h1>
           <p className="text-xl max-w-3xl mx-auto">
-            Because Your Parents Deserve More Than Just Care - They Deserve Connection 
+          An initiative by Satoru Foundation, Mee Nestham brings young hearts to elderly homes, creating meaningful connections 
           </p>
         </div>
       </section>
@@ -111,7 +111,7 @@ export default function MeeNesthamContent() {
 
         <ul className="list-disc pl-6 mb-8">
           <li className="mb-3 leading-relaxed">
-            <strong>Physical Wellness:</strong> Light breathing and mobility exercises
+            <strong>Physical Wellness:</strong> Breathing and mobility exercises
           </li>
           <li className="mb-3 leading-relaxed">
             <strong>Cognitive Engagement:</strong> Memory games, puzzles, and cultural storytelling
@@ -226,7 +226,7 @@ export default function MeeNesthamContent() {
         <div>
           <p className="mb-4 leading-relaxed">
             The Satoru Foundation is a research-driven NGO committed to advancing health, dignity, and connection for
-            India's elderly. With deep roots in Hyderabad, our foundation integrates scientific methods with
+            India's elderly. Our foundation integrates scientific methods with
             human-centered approaches. Our leadership includes trained gerontologists, public health researchers, and
             volunteers experienced in the psychology of aging.
           </p>

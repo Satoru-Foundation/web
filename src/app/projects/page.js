@@ -44,29 +44,34 @@ export default function ProjectsPage() {
 
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-1">
             <h2 className="text-3xl font-bold mb-6 text-[#5e6f47]">How We Help</h2>
             <p className="text-lg text-gray-600 max-w-9xl mx-auto mb-6">
-            At Satoru Foundation™, one of our main goals is to address the challenges that affect human life, i.e., poor health and poor quality of life. Satoru Foundation wants to make significant progress towards a more equitable and inclusive society by addressing and combating inequality. Its initiatives and projects are aimed at leading to tangible improvements in enhancing the quality of life, improving livelihoods, promoting sustainability, supporting marginalised communities, reducing poverty and hunger, especially improving the lives of older individuals, and fostering a more inclusive and supportive community.
+              At Satoru Foundation™, one of our main goals is to address the challenges that affect human life, i.e., poor health and poor quality of life. Satoru Foundation wants to make significant progress towards a more equitable and inclusive society by addressing and combating inequality. Its initiatives and projects are aimed at leading to tangible improvements in enhancing the quality of life, improving livelihoods, promoting sustainability, supporting marginalised communities, reducing poverty and hunger, especially improving the lives of older individuals, and fostering a more inclusive and supportive community.
             </p>
-            <div className="h-1 w-full bg-[#ecc750] mx-auto rounded-full mb-6 mt-1"></div>
+            <div className="h-1 w-full bg-[#ecc750] mx-auto rounded-full mb-1 mt-1"></div>
           </div>
+        </div>
+      </section>
 
-          <div className="space-y-20">
-            {projects.map((projects, index) => (
-              <div
-                key={projects.id}
-                className={`grid md:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
-              >
+      {/* Alternating background project sections */}
+      <section>
+        <div className="space-y-0">
+          {projects.map((project, index) => (
+            <div
+              key={project.id}
+              className={`py-16 px-4 md:px-0 ${index % 2 === 0 ? "bg-white" : "bg-gray-50"}`}
+            >
+              <div className={`grid md:grid-cols-2 gap-12 items-center container mx-auto ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}>
                 <div className={index % 2 === 1 ? "md:order-2" : ""}>
-                  <h2 className="text-3xl font-bold mb-6 text-[#5e6f47]">{projects.title}</h2>
-                  <p className="text-lg text-gray-600 mb-6">{projects.description}</p>
+                  <h2 className="text-3xl font-bold mb-6 text-[#5e6f47]">{project.title}</h2>
+                  <p className="text-lg text-gray-600 mb-6">{project.description}</p>
                   <p className="text-lg text-gray-600 mb-8">
-                    Through our {projects.title.toLowerCase()} projects, we've been able to impact thousands of lives and
+                    Through our {project.title.toLowerCase()} projects, we've been able to impact thousands of lives and
                     create lasting positive change for older adults across India.
                   </p>
                   <Button size="lg" className="bg-[#5e6f47] hover:bg-[#5e6f47]/90 text-white">
-                    <Link href={`/projects/${projects.id}`}>Learn More</Link>
+                    <Link href={`/projects/${project.id}`}>Learn More</Link>
                   </Button>
                 </div>
                 <div
@@ -74,11 +79,11 @@ export default function ProjectsPage() {
                     index % 2 === 1 ? "md:order-1" : ""
                   }`}
                 >
-                  <Image src={projects.image || "/placeholder.svg"} alt={projects.title} fill className="object-cover" />
+                  <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 

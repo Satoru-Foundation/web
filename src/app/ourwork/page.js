@@ -28,12 +28,12 @@ export default function OurWorkPage() {
       image: "/activities/skills.png",
     },
     {
-        id: "Awareness",
-        title: "Awareness & Advocacy",
-        description:
-          "The Satoru Foundation provides awareness to the old people.",
-        image: "/activities/awareness.jpg",
-      },
+      id: "Awareness",
+      title: "Awareness & Advocacy",
+      description:
+        "The Satoru Foundation provides awareness to the old people.",
+      image: "/activities/awareness.jpg",
+    },
   ]
 
   return (
@@ -49,21 +49,23 @@ export default function OurWorkPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <p className="text-lg text-gray-600 max-w-9xl mx-auto mb-6">
-            At Satoru Foundation™, our activities are driven by a deep commitment to creating meaningful change in society—especially for older individuals and marginalized communities. Through our diverse activities, we address critical issues such as poor health, limited livelihood opportunities, and lack of awareness. From promoting holistic health and well-being to empowering individuals through skills training, research, advocacy, and innovation, each initiative is designed to improve the quality of life, foster sustainability, and build a more inclusive and equitable future for all.
+              At Satoru Foundation™, our activities are driven by a deep commitment to creating meaningful change in society—especially for older individuals and marginalized communities. Through our diverse activities, we address critical issues such as poor health, limited livelihood opportunities, and lack of awareness. From promoting holistic health and well-being to empowering individuals through skills training, research, advocacy, and innovation, each initiative is designed to improve the quality of life, foster sustainability, and build a more inclusive and equitable future for all.
             </p>
             <div className="h-1 w-full bg-[#ecc750] mx-auto rounded-full mb-6 mt-1"></div>
           </div>
+        </div>
 
-          <div className="space-y-20">
-            {activities.map((activity, index) => (
-              <div
-                key={activity.id}
-                className={`grid md:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
-              >
+        <div className="space-y-0">
+          {activities.map((activity, index) => (
+            <div
+              key={activity.id}
+              className={`py-16 ${index % 2 === 0 ? "bg-white" : "bg-gray-50"}`}
+            >
+              <div className={`grid md:grid-cols-2 gap-12 items-center container mx-auto px-4 ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}>
                 <div className={index % 2 === 1 ? "md:order-2" : ""}>
                   <h2 className="text-3xl font-bold mb-6 text-[#5e6f47]">{activity.title}</h2>
                   <p className="text-lg text-gray-600 mb-6">{activity.description}</p>
@@ -83,8 +85,8 @@ export default function OurWorkPage() {
                   <Image src={activity.image || "/placeholder.svg"} alt={activity.title} fill className="object-cover" />
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 

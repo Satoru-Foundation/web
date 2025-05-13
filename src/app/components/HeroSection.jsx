@@ -96,7 +96,7 @@ export default function HeroSection() {
           <div className="mx-auto mb-6 h-1.5 w-32 sm:w-40 md:w-52 rounded-full bg-gradient-to-r from-[#ecc750] via-[#5e6f47] to-[#ecc750]" />
 
           <p className="text-base sm:text-lg md:text-xl font-medium leading-relaxed text-white drop-shadow-md">
-            The Satoru Foundation is dedicated to improving the quality of life for the elderly and disabled in our community. We provide essential services, support, and resources to help them live with dignity and respect.
+            Satoru Foundation is dedicated to improving the quality of life for the elderly in our community. We provide essential services, support, and resources to help them live with dignity and respect.
           </p>
         </div>
       </div>

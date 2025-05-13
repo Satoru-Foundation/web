@@ -64,6 +64,7 @@ const MadaviPage = () => {
                 <strong>Telangana:</strong> Hyderabad, Ranga Reddy, Sanga Reddy, Nalgonda
               </p>
               <p><strong>Current Status:</strong> Data analysis in progress</p>
+              <p><strong>Impact:</strong> 200 people</p>
             </div>
           </div>
         </div>

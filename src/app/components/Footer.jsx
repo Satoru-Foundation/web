@@ -1,3 +1,5 @@
+'use client';
+
 import Link from "next/link"
 import Image from "next/image"
 import { Facebook, Instagram, Twitter, Youtube, Mail, Phone } from "lucide-react"
@@ -9,14 +11,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Left Section - Logo and Mission */}
           <div>
-            <div className="mb-4">
+            <div className="mb-4 mt-17">
               <Image src="/footer.png" alt="Satoru Foundation Logo" width={225} height={225} />
               {/* <h2 className="mt-2 text-4xl font-bold tracking-wide text-white">SATORU</h2>
               <h2 className="mt-2 text-xl font-bold tracking-wide text-[#ecc750]">FOUNDATION</h2> */}
             </div>
-            <p className="text-white mb-6">
+            {/* <p className="text-white mb-6">
               “The main mission of the Satoru Foundation is to improve quality of life, overall health, and well-being among the marginalised communities in India”.
-            </p>
+            </p> */}
             <Link href="https://rzp.io/rzp/rAIotl7h" className="inline-block bg-[#ecc750] text-[#1e2b26] font-semibold px-5 py-2 rounded-md hover:bg-yellow-400 transition-colors">
             DONATE NOW
             </Link>
@@ -34,6 +36,8 @@ export default function Footer() {
               <li><Link href="/getinvolved" className="hover:text-[#ecc750]">Get Involved</Link></li>
               <li><Link href="/contact" className="hover:text-[#ecc750]">Contact</Link></li>
               <li><Link href="/termsandpolicy" className="hover:text-[#ecc750]">Terms and Policy</Link></li>
+              <li><Link href="/legal-compliance" className="hover:text-[#ecc750]">Legal Compliance</Link></li>
+              <li><Link href="/organizational-policy" className="hover:text-[#ecc750]">Organizational Policy</Link></li>
             </ul>
           </div>
 
@@ -57,6 +61,10 @@ export default function Footer() {
             <div className="flex items-center text-white mb-2">
               <Mail className="h-4 w-4 mr-2 text-[#ecc750]" />
               <a href="mailto:info@satorufoundation.org" className="hover:text-[#ecc750]">info@satorufoundation.org</a>
+            </div>
+            <div className="flex items-center text-white mb-2">
+            <Mail className="h-4 w-4 mr-2 text-[#ecc750]" />
+            <a href="mailto:satorufoundation@gmail.com" className="hover:text-[#ecc750]">satorufoundation@gmail.com</a>
             </div>
             <div className="flex items-center text-white mb-6">
               <Phone className="h-4 w-4 mr-2 text-[#ecc750]" />

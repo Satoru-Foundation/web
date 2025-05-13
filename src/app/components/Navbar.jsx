@@ -47,7 +47,7 @@ export default function Navbar() {
         <nav className="hidden md:flex space-x-6 items-center">
           {navItems.map((item, index) =>
             item.subItems ? (
-              <div key={index} className="relative group">
+              <div key={index} className="relative group inline-block">
                 <motion.div
                   whileHover={{ y: -2, scale: 1.03 }}
                   transition={{ type: "spring", stiffness: 300 }}
@@ -59,29 +59,27 @@ export default function Navbar() {
                     {item.name}
                   </Link>
                 </motion.div>
-
+            
                 {/* Dropdown */}
                 <motion.div
                   initial={{ opacity: 0, y: -5 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -5 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"
+                  className="absolute top-full left-1/2 -translate-x-1/2 mt-2 min-w-[10rem] bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"
                 >
                   {item.subItems.map((subItem, subIndex) => (
                     <motion.div
                       key={subIndex}
                       whileHover={{ y: -2, scale: 1.03 }}
                       transition={{ type: "spring", stiffness: 300 }}
-                      className="relative"
                     >
                       <Link
                         href={subItem.href}
-                        className="block px-4 py-2 text-[#5e6f47] font-semibold text-lg transition-colors duration-300 hover:text-[#ecc750]"
+                        className="flex items-center justify-center h-12 w-full text-[#5e6f47] font-semibold text-lg transition-colors duration-300 hover:text-[#ecc750] text-center"
                       >
                         {subItem.name}
                       </Link>
-                      <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#ecc750] hover:w-full transition-all duration-300"></span>
                     </motion.div>
                   ))}
                 </motion.div>
@@ -103,6 +101,7 @@ export default function Navbar() {
               </motion.div>
             )
           )}
+        
           <Link
             href="https://rzp.io/rzp/rAIotl7h"
             className="ml-4 bg-[#ecc750] text-[#5e6f47] px-6 py-2 font-bold rounded-lg border-2 border-[#ecc750] hover:bg-[#5e6f47] hover:text-[#ecc750] transition duration-300"
