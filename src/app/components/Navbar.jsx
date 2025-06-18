@@ -103,7 +103,7 @@ export default function Navbar() {
           )}
         
           <Link
-            href="https://rzp.io/rzp/rAIotl7h"
+            href="https://donate.satorufoundation.org"
             className="ml-4 bg-[#ecc750] text-[#5e6f47] px-6 py-2 font-bold rounded-lg border-2 border-[#ecc750] hover:bg-[#5e6f47] hover:text-[#ecc750] transition duration-300"
           >
             Donate
