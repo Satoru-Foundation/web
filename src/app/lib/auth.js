@@ -39,7 +39,7 @@ export async function createSession(payload) {
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'lax',
     maxAge: SESSION_DURATION / 1000,
-    path: '/',
+    path: '/admin',
   });
 
   return session;
@@ -61,7 +61,7 @@ export async function getSession() {
 
 export async function clearSession() {
   const cookieStore = await cookies();
-  cookieStore.delete('session');
+  cookieStore.delete('session', { path: '/admin' });
 }
 
 export async function requireAuth(request) {
