@@ -213,6 +213,11 @@ export default function MeeNesthamContent() {
           >
             Sign Up for a Free Introductory Visit
           </button>
+
+          <p className="text-lg mt-3 max-w-2xl mx-auto">
+            <strong>*MeeNestham is presently available in Hyderabad, Telangana.*</strong> 
+          </p>
+
         </div>
       </section>
 
