@@ -180,7 +180,7 @@ export default function Navbar() {
 
   <li className="mt-4">
     <Link
-      href="https://rzp.io/rzp/rAIotl7h"
+      href="https://donate.satorufoundation.org"
       className="inline-block bg-[#ecc750] text-[#5e6f47] w-full text-center px-4 py-2 font-bold rounded-md border-2 border-[#ecc750] hover:bg-[#5e6f47] hover:text-[#ecc750] transition"
       onClick={() => setIsMenuOpen(false)}
     >

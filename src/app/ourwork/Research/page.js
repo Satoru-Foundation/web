@@ -8,9 +8,9 @@ export default function ResearchPage() {
   const research = [
     {
       id: "CLAR",
-      title: "CLAR:Centre for Longevity and Ageing Research",
+      title: "CLAR:Centre for Longevity and aging Research",
       description:
-        "The Centre for Longevity and Ageing Research in India engages in various activities aimed at promoting healthy ageing and advancing research in longevity. Here are detailed list of activities we undertake:",
+        "The Centre for Longevity and aging Research in India engages in various activities aimed at promoting healthy  and advancing research in longevity. Here are detailed list of activities we undertake:",
       image: "/ourwork/research/ageing.jpg",
     },
     {

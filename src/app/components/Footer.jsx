@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Instagram, Twitter, Youtube, Mail, Phone } from "lucide-react"
+import { Facebook, Instagram, Twitter, Youtube, Mail, Phone, Linkedin } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -38,6 +38,7 @@ export default function Footer() {
               <li><Link href="/termsandpolicy" className="hover:text-[#ecc750]">Terms and Policy</Link></li>
               <li><Link href="/legal-compliance" className="hover:text-[#ecc750]">Legal Compliance</Link></li>
               <li><Link href="/organizational-policy" className="hover:text-[#ecc750]">Organizational Policy</Link></li>
+              <li><Link href="/admin/testimonials" className="hover:text-[#ecc750]"></Link></li>
             </ul>
           </div>
 
@@ -46,9 +47,9 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-1">Our Projects</h3>
             <div className="w-28 h-1 bg-[#ecc750] mb-4 rounded"></div>
             <ul className="space-y-3 text-white">
-              <li><Link href="/projects/madavi" className="hover:text-[#ecc750]">Madavi</Link></li>
-              <li><Link href="/projects/gaman" className="hover:text-[#ecc750]">Gaman</Link></li>
-              <li><Link href="/projects/active-india" className="hover:text-[#ecc750]">Active India</Link></li>
+              <li><Link href="/projects/Madavi" className="hover:text-[#ecc750]">Madavi</Link></li>
+              <li><Link href="/projects/Gaman" className="hover:text-[#ecc750]">Gaman</Link></li>
+              <li><Link href="/projects/ActiveIndia" className="hover:text-[#ecc750]">Active India</Link></li>
             </ul>
           </div>
 
@@ -56,8 +57,8 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-1">Contact</h3>
             <div className="w-18 h-1 bg-[#ecc750] mb-4 rounded"></div>
-            <p className="text-white mb-2">Model House building, Saibaba Temple Rd, Dwarakapuri,</p>
-            <p className="text-white mb-2">Panjagutta, Hyderabad, Telangana, 500082</p>
+            <p className="text-white mb-2">Model House building, Saibaba Temple Rd, Dwarakapuri, Panjagutta, Hyderabad, Telangana, 500082</p>
+            {/* <p className="text-white mb-2">Panjagutta, Hyderabad, Telangana, 500082</p> */}
             <div className="flex items-center text-white mb-2">
               <Mail className="h-4 w-4 mr-2 text-[#ecc750]" />
               <a href="mailto:info@satorufoundation.org" className="hover:text-[#ecc750]">info@satorufoundation.org</a>
@@ -71,10 +72,10 @@ export default function Footer() {
               <a href="tel:+916303637871" className="hover:text-[#ecc750]">+91 6303637871</a>
             </div>
             <div className="flex space-x-4">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><Instagram className="h-5 w-5 hover:text-[#ecc750]" /></a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><Facebook className="h-5 w-5 hover:text-[#ecc750]" /></a>
+              <a href="https://instagram.com/satoru_foundation" target="_blank" rel="noopener noreferrer"><Instagram className="h-5 w-5 hover:text-[#ecc750]" /></a>
+              <a href="https://www.facebook.com/profile.php?id=61565946122315" target="_blank" rel="noopener noreferrer"><Facebook className="h-5 w-5 hover:text-[#ecc750]" /></a>
               <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"><Youtube className="h-5 w-5 hover:text-[#ecc750]" /></a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><Twitter className="h-5 w-5 hover:text-[#ecc750]" /></a>
+              <a href="https://www.linkedin.com/company/satoru-foundation/" target="_blank" rel="noopener noreferrer"><Linkedin className="h-5 w-5 hover:text-[#ecc750]" /></a>
             </div>
           </div>
         </div>

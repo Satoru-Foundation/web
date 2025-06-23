@@ -243,58 +243,76 @@ export default function AdminTestimonialsPage() {
             <h2 className="text-black text-2xl font-bold mb-4 ">
               {editingTestimonial ? 'Edit Testimonial' : 'Add New Testimonial'}
             </h2>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label htmlFor="name" className='text-black'>Name</label>
-                <input
-                  id="name"
-                  value={formData.name}
-                  className='text-black'
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  required
-                />
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="name" className="block text-black font-semibold mb-1">Name</label>
+                  <input
+                    id="name"
+                    value={formData.name}
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-black focus:outline-none focus:ring-2 focus:ring-[#5e6f47] focus:border-[#5e6f47] transition"
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="role" className="block text-black font-semibold mb-1">Role</label>
+                  <input
+                    id="role"
+                    value={formData.role}
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-black focus:outline-none focus:ring-2 focus:ring-[#5e6f47] focus:border-[#5e6f47] transition"
+                    onChange={(e) => setFormData({ ...formData, role: e.target.value })}
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="qualification" className="block text-black font-semibold mb-1">Qualification</label>
+                  <input
+                    id="qualification"
+                    value={formData.qualification}
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-black focus:outline-none focus:ring-2 focus:ring-[#5e6f47] focus:border-[#5e6f47] transition"
+                    onChange={(e) => setFormData({ ...formData, qualification: e.target.value })}
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="image" className="block text-black font-semibold mb-1">Image Upload</label>
+                  <input
+                    id="image"
+                    type="file"
+                    accept="image/*"
+                    className='text-black'
+                    onChange={async (e) => {
+                      const file = e.target.files[0];
+                      if (file) {
+                        const reader = new FileReader();
+                        reader.onloadend = () => {
+                          setFormData({ ...formData, image: reader.result });
+                        };
+                        reader.readAsDataURL(file);
+                      }
+                    }}
+                  />
+                  {formData.image && (
+                    <img
+                      src={formData.image}
+                      alt="Preview"
+                      className="mt-2 rounded-full object-cover h-20 w-20 border border-[#5e6f47] shadow"
+                    />
+                  )}
+                </div>
               </div>
               <div>
-                <label htmlFor="role" className='text-black'>Role</label>
-                <input
-                  id="role"
-                  value={formData.role}
-                  className='text-black'
-                  onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="qualification" className='text-black'>Qualification</label>
-                <input
-                  id="qualification"
-                  value={formData.qualification}
-                  className='text-black'
-                  onChange={(e) => setFormData({ ...formData, qualification: e.target.value })}
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="image" className='text-black'>Image URL</label>
-                <input
-                  id="image"
-                  value={formData.image}
-                  className='text-black'
-                  onChange={(e) => setFormData({ ...formData, image: e.target.value })}
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="content" className='text-black'>Content</label>
+                <label htmlFor="content" className="block text-black font-semibold mb-1">Content</label>
                 <Textarea
                   id="content"
                   value={formData.content}
                   onChange={(e) => setFormData({ ...formData, content: e.target.value })}
                   required
-                  className="min-h-[150px] text-black"
+                  className="w-full min-h-[150px] border border-gray-300 rounded px-3 py-2 text-black focus:outline-none focus:ring-2 focus:ring-[#5e6f47] focus:border-[#5e6f47] transition"
                 />
               </div>
-              <div className="flex justify-end space-x-4">
+              <div className="flex justify-end space-x-4 mt-6">
                 <Button
                   type="button"
                   variant="outline"
@@ -302,10 +320,11 @@ export default function AdminTestimonialsPage() {
                     setShowModal(false);
                     setEditingTestimonial(null);
                   }}
+                  className="border border-gray-300 text-black hover:bg-gray-100"
                 >
                   Cancel
                 </Button>
-                <Button type="submit" className="bg-[#5e6f47] hover:bg-[#5e6f47]/90 text-white">
+                <Button type="submit" className="bg-[#5e6f47] hover:bg-[#5e6f47]/90 text-white px-6 py-2 rounded">
                   {editingTestimonial ? 'Update' : 'Add'} Testimonial
                 </Button>
               </div>

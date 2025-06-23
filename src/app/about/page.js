@@ -30,7 +30,7 @@ export default function AboutPage() {
                 initiatives in India.
               </p>
               <p className="text-lg text-gray-600 mb-4">
-                Our primary focus is addressing the issues connected to ageing, longevity, and ageism among Indians. We
+                Our primary focus is addressing the issues connected to aging, longevity, and ageism among Indians. We
                 believe that every older person deserves dignity, respect, and the opportunity to live a fulfilling
                 life.
               </p>
@@ -130,7 +130,7 @@ export default function AboutPage() {
               size="lg"
               className="bg-[#ecc750] text-black hover:bg-[#eab308]"
             >
-              <a href="https://rzp.io/rzp/rAIotl7h" className="text-black hover:underline">Support Our Work</a>
+              <a href="https://donate.satorufoundation.org" className="text-black hover:underline">Support Our Work</a>
             </Button>
           </div>
         </div>

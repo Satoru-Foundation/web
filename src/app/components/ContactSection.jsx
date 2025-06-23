@@ -18,6 +18,8 @@ export default function ContactSection() {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
 
+// Send from contact@satorufoundation.org and to info@satorufoundation.org and also the user's email which has been entered in the form
+// 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));

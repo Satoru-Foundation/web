@@ -130,6 +130,7 @@ export default async function GetInvolved() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl text-[#5e6f47] font-bold text-center mb-12">What Our Interns Say</h2>
           <div className="max-w-4xl mx-auto">
+            {console.log(testimonials.length)}
             {testimonials.length === 0 ? (
               <div className="text-center text-gray-600">No testimonials available.</div>
             ) : (
