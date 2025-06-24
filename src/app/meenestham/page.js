@@ -215,7 +215,7 @@ export default function MeeNesthamContent() {
           </button>
 
           <p className="text-lg mt-3 max-w-2xl mx-auto">
-            <strong>*MeeNestham is presently available in Hyderabad, Telangana.*</strong> 
+            <strong>*MeeNestham is presently only available in Hyderabad, Telangana.*</strong> 
           </p>
 
         </div>
