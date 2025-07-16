@@ -64,10 +64,10 @@ model Team {
 model Job {
   id          String   @id @default(cuid())
   title       String
-  description String
+  description String?
   location    String
   type        String   // Full-time, Part-time, Internship, etc.
-  requirements String
+  requirements String?
   salary      String?
   deadline    String
   pdfBase64   String   // Base64 encoded PDF data

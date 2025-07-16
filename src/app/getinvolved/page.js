@@ -59,11 +59,11 @@ export default async function GetInvolved() {
           {jobOpenings.length === 0 ? (
             <div className="text-center text-gray-600">No current openings available.</div>
           ) : (
-            <div className="grid md:grid-cols-2 gap-10">
+            <div className="grid md:grid-cols-1 gap-10">
               {jobOpenings.map((job) => (
                 <div key={job.id} className="p-6 border rounded-xl shadow-md">
                   <h3 className="text-xl text-black font-semibold mb-2">{job.title}</h3>
-                  <p className="text-gray-700 mb-4">{job.description}</p>
+                  {job.description && (<p className="text-gray-700 mb-4">{job.description}</p>)}
 
                   {/* Display Job Details */}
                   <div className="space-y-2 mb-4">
@@ -73,9 +73,11 @@ export default async function GetInvolved() {
                     <p className="text-gray-500">
                       <strong>Type:</strong> {job.type}
                     </p>
-                    <p className="text-gray-500">
+                    {job.requirements && (
+                      <p className="text-gray-500">
                       <strong>Requirements:</strong> {job.requirements}
                     </p>
+                  )}
                     {job.salary && (
                       <p className="text-gray-500">
                         <strong>Salary:</strong> {job.salary}

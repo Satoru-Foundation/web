@@ -15,7 +15,7 @@ const navItems = [
     href: "/ourwork",
     subItems: [{ name: "Projects", href: "/projects" }],
   },
-  { name: "MeeNestham", href: "/meenestham" },
+  { name: "Aatmeeya Sparsha", href: "/aatmeeyasparsha" },
   { name: "Get Involved", href: "/getinvolved" },
   { name: "Contact Us", 
     href: "/contact" ,

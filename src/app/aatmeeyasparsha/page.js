@@ -77,9 +77,9 @@ export default function MeeNesthamContent() {
       <Navbar />
       <section className="bg-[#5e6f47] text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Mee Nestham</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Aatmeeya Sparsha</h1>
           <p className="text-xl max-w-3xl mx-auto">
-          An initiative by Satoru Foundation, Mee Nestham brings young hearts to elderly homes, creating meaningful connections 
+          An initiative by Satoru Foundation, Aatmeeya Sparsha brings young hearts to elderly homes, creating meaningful connections 
           </p>
         </div>
       </section>
@@ -92,13 +92,12 @@ export default function MeeNesthamContent() {
             <TrendingUp className="mr-2 h-5 w-5" /> Did You Know?
           </h2> */}
           <p className="mb-4 leading-relaxed">
-            Over 40% of elderly individuals in India experience some form of social isolation. Mee Nestham bridges this
+            Over 40% of elderly individuals in India experience some form of social isolation. Aatmeeya Sparsha bridges this
             gap through meaningful connections.
           </p>
           <p className="text-lg">
             <span className="font-bold text-[#5e6f47]">3X</span> increase in emotional well-being and{" "}
-            <span className="font-bold text-[#5e6f47]">25%</span> improvement in mobility seen after 12 weeks with Mee
-            Nestham.
+            <span className="font-bold text-[#5e6f47]">25%</span> improvement in mobility seen after 12 weeks with Aatmeeya Sparsha
           </p>
         </div>
       </section>
@@ -137,14 +136,14 @@ export default function MeeNesthamContent() {
           <div className="flex-1 min-w-[200px] max-w-[250px] mb-4">
             <Image
               src="/meenestham/chess.jpg?height=200&width=200"
-              alt="Playing memory games with volunteers"
+              alt="Playing memory games with Aatmeeyulu"
               width={200}
               height={200}
               className="w-full h-auto rounded-lg object-cover mt-4 mb-5"
             />
             <Image
               src="/meenestham/chess2.jpg?height=200&width=200"
-              alt="Playing memory games with volunteers"
+              alt="Playing memory games with Aatmeeyulu"
               width={200}
               height={200}
               className="w-full h-auto rounded-lg object-cover"
@@ -153,7 +152,7 @@ export default function MeeNesthamContent() {
           <div className="flex-1 min-w-[200px] max-w-[250px] mb-4">
             <Image
               src="/meenestham/help.png?height=200&width=200"
-              alt="Volunteers helping with errands"
+              alt="Aatmeeyulu helping with errands"
               width={200}
               height={200}
               className="w-full h-auto rounded-lg object-cover"
@@ -165,13 +164,13 @@ export default function MeeNesthamContent() {
       {/* Why Choose Section */}
       <section className="py-8 px-4 max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-[#5e6f47] flex items-center mb-6">
-          <Heart className="mr-2 h-5 w-5" /> Why Choose Mee Nestham?
+          <Heart className="mr-2 h-5 w-5" /> Why Choose Aatmeeya Sparsha?
         </h2>
 
         <ul className="list-disc pl-6">
           <li className="mb-3 leading-relaxed">Scientifically structured 12-week protocol with measurable outcomes</li>
           <li className="mb-3 leading-relaxed">
-            Volunteers trained in elder psychology, mobility support, and empathy
+            Staff(Aatmeeyulu) trained in elder psychology, mobility support, and empathy
           </li>
           <li className="mb-3 leading-relaxed">Tailored visits for each senior—because no two parents are the same</li>
           <li className="mb-3 leading-relaxed">
@@ -202,7 +201,7 @@ export default function MeeNesthamContent() {
             {/* Call To Action Section */}
             <section className="py-12 px-4 bg-[#5e6f47] text-white text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Bring Mee Nestham to Your Parents' Doorstep</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Bring Aatmeeya Sparsha to Your Parents' Doorstep</h2>
           <p className="text-lg mb-8 max-w-2xl mx-auto">
             Don't let your loved ones age alone. Let them thrive with purpose and joy.
           </p>
@@ -215,7 +214,7 @@ export default function MeeNesthamContent() {
           </button>
 
           <p className="text-lg mt-3 max-w-2xl mx-auto">
-            <strong>*MeeNestham is presently only available in Hyderabad, Telangana.*</strong> 
+            <strong>*Aatmeeya Sparsha is presently only available in Hyderabad, Telangana.*</strong> 
           </p>
 
         </div>
@@ -233,7 +232,7 @@ export default function MeeNesthamContent() {
             The Satoru Foundation is a research-driven NGO committed to advancing health, dignity, and connection for
             India's elderly. Our foundation integrates scientific methods with
             human-centered approaches. Our leadership includes trained gerontologists, public health researchers, and
-            volunteers experienced in the psychology of aging.
+            staff(aatmeeyulu) experienced in the psychology of aging.
           </p>
 
           <p className="mb-4 leading-relaxed">
@@ -258,7 +257,7 @@ export default function MeeNesthamContent() {
           }
         }}
       >
-        <div className="bg-white/80 backdrop-blur-md rounded-lg p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-xl border border-white/20">
+        <div className="bg-white/80 backdrop-blur-md rounded-lg p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-xl border border-white/20 text-black">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-2xl font-bold text-[#5e6f47]">Request a Free Visit</h2>
             <button

@@ -70,15 +70,14 @@ export async function POST(request) {
             <p><strong>Message:</strong> ${message}</p>
           </div>
           
-          <p>If you have any urgent inquiries, please don't hesitate to call us at +91 6303637871.</p>
+          <p>If you have any urgent inquiries, please don't hesitate to reach us at info@satorufoundation.org</p>
           
           <p>Best regards,<br>
           <strong>Satoru Foundation Team</strong></p>
           
           <div style="border-top: 2px solid #ecc750; padding-top: 20px; margin-top: 30px; color: #666; font-size: 12px;">
             <p><strong>Satoru Foundation</strong><br>
-            Model House building, Saibaba Temple Rd, Dwarakapuri, Punjagutta, Hyderabad, Telangana. 500082<br>
-            Email: info@satorufoundation.org | Phone: +91 6303637871</p>
+            Email: info@satorufoundation.org</p>
           </div>
         </div>
       `,
