@@ -68,7 +68,7 @@ const MadaviPage = () => {
         <div className="mt-16 text-center">
           <Link href={"/contact"}>
           <Button className="bg-[#ecc750] hover:bg-yellow-500 text-black px-6 py-3 text-lg font-semibold rounded-full">
-            REGISTER YOURSELF
+             REGISTER YOURSELF TO PARTICIPATE
           </Button>
           </Link>
         </div>

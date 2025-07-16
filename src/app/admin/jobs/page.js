@@ -237,7 +237,6 @@ export default function AdminJobsPage() {
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                   className="w-full p-2 border border-gray-300 rounded text-black"
                   rows="4"
-                  required
                 />
               </div>
               <div>
@@ -272,7 +271,6 @@ export default function AdminJobsPage() {
                   onChange={(e) => setFormData({ ...formData, requirements: e.target.value })}
                   className="w-full p-2 border border-gray-300 rounded text-black"
                   rows="3"
-                  required
                 />
               </div>
               <div>
