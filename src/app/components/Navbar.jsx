@@ -15,7 +15,7 @@ const navItems = [
     href: "/ourwork",
     subItems: [{ name: "Projects", href: "/projects" }],
   },
-  { name: "MeeNestham", href: "/meenestham" },
+  { name: "Aatmeeya Sparsha", href: "/aatmeeyasparsha" },
   { name: "Get Involved", href: "/getinvolved" },
   { name: "Contact Us", 
     href: "/contact" ,
@@ -103,7 +103,7 @@ export default function Navbar() {
           )}
         
           <Link
-            href="https://rzp.io/rzp/rAIotl7h"
+            href="https://donate.satorufoundation.org"
             className="ml-4 bg-[#ecc750] text-[#5e6f47] px-6 py-2 font-bold rounded-lg border-2 border-[#ecc750] hover:bg-[#5e6f47] hover:text-[#ecc750] transition duration-300"
           >
             Donate
@@ -180,7 +180,7 @@ export default function Navbar() {
 
   <li className="mt-4">
     <Link
-      href="https://rzp.io/rzp/rAIotl7h"
+      href="https://donate.satorufoundation.org"
       className="inline-block bg-[#ecc750] text-[#5e6f47] w-full text-center px-4 py-2 font-bold rounded-md border-2 border-[#ecc750] hover:bg-[#5e6f47] hover:text-[#ecc750] transition"
       onClick={() => setIsMenuOpen(false)}
     >

@@ -19,8 +19,8 @@ export default function ContactPage() {
       <ContactSection />
 
       {/* New: Organization Info Section */}
-      <section className="py-16 bg-[#fdf8f2] text-gray-800">
-        <div className="container mx-auto px-4 max-w-3xl space-y-4 text-base md:text-lg leading-relaxed">
+      {/* <section className="py-16 bg-[#fdf8f2] text-gray-800"> */}
+        {/* <div className="container mx-auto px-4 max-w-3xl space-y-4 text-base md:text-lg leading-relaxed">
           <p><strong>Organisation Name:</strong> SATORU FOUNDATION™</p>
           <p>Legal Compliance: Non-Profit Organisation, Registered under Section 8 of the Companies Act, 2013,</p>
           <p>Recognized By Ministry of Corporate Affairs, Government of India, Niti Aayog.</p>
@@ -31,8 +31,8 @@ export default function ContactPage() {
           <p><strong>Income TAX (12A/80G Approved)</strong></p>
           <p>12A : ABOCS3612CE20241</p>
           <p>80G : ABOCS3612CF20241</p>
-        </div>
-      </section>
+        </div> */}
+      {/* </section> */}
 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">

@@ -8,9 +8,9 @@ export default function ProjectsPage() {
   const projects = [
     {
       id: "Madavi",
-      title: "Madavi:Multi-Temporal and Dimensional Ageing Views in India",
+      title: "Madavi:Multi-Temporal and Dimensional aging Views in India",
       description:
-        "This project's main goal is to understand the impact of day-to-day dynamic-level changes in ageing on older adults' physical and mental health.",
+        "This project's main goal is to understand the impact of day-to-day dynamic-level changes in aging on older adults' physical and mental health.",
       image: "/projects/madavi.jpg",
     },
     {
@@ -95,7 +95,7 @@ export default function ProjectsPage() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button size="lg" className="bg-[#5e6f47] hover:bg-[#5e6f47]/90 text-white font-bold">
-              <Link href="https://rzp.io/rzp/rAIotl7h">Support Our Work</Link>
+              <Link href="https://donate.satorufoundation.org">Support Our Work</Link>
             </Button>
             <Button
               size="lg"

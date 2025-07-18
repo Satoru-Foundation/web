@@ -11,7 +11,7 @@ export default function CLARPage() {
 
       <section className="bg-[#5e6f47] text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">CLAR: Centre for Longevity and Ageing Research</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">CLAR: Centre for Longevity and aging Research</h1>
         </div>
       </section>
 
@@ -25,7 +25,7 @@ export default function CLARPage() {
                 CLAR
               </span>
               <p className="text-gray-900 mb-6 leading-relaxed text-[20px]">
-                The Centre for Longevity and Ageing Research in India engages in various activities aimed at promoting healthy ageing and advancing research in longevity. Here are detailed list of activities we undertake:
+                The Centre for Longevity and Ageing Research in India engages in various activities aimed at promoting healthy aging and advancing research in longevity. Here are detailed list of activities we undertake:
               </p>
               <ul className="list-none space-y-3 text-gray-700">
                 <li> <strong>Research Initiatives:</strong> Conducting studies on aging-related health issues, exploring genetic, environmental, and lifestyle factors that influence longevity.</li>
@@ -41,7 +41,7 @@ export default function CLARPage() {
               </ul>
 
               <p className="text-gray-900 mb-6 leading-relaxed text-[20px]">
-                These activities collectively aim to enhance the quality of life for older adults in India and foster a society that values and supports its ageing population
+                These activities collectively aim to enhance the quality of life for older adults in India and foster a society that values and supports its aging population
               </p>
             </div>
           </div>

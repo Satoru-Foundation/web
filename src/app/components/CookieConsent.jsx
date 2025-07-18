@@ -62,3 +62,9 @@ export default function CookieConsent() {
     </div>
   );
 }
+
+// Custom hook to check cookie consent
+export function useCookieConsent() {
+  if (typeof window === 'undefined') return null;
+  return localStorage.getItem('cookieConsent');
+}

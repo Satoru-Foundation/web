@@ -14,7 +14,7 @@ const MadaviPage = () => {
 
       {/* MADAVi Banner Section */}
       <div className="bg-[#5c6e45] py-16 text-center text-white">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">MADAVI:Multi-Temporal and Dimensional Ageing Views in India</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">MADAVI:Multi-Temporal and Dimensional aging Views in India</h1>
       </div>
 
       <div className="bg-white text-gray-800 px-6 md:px-20 py-16">
@@ -27,14 +27,14 @@ const MadaviPage = () => {
                 Madavi
               </span>
               <p className="text-gray-900 mb-6 leading-relaxed text-[20px]">
-                In this innovative project, we will explore the pathways that shape older adults' views on ageing, focusing on critical factors such as healthcare access, health insurance, digital services, health infrastructure, social welfare schemes, pensions, family support, and socio-economic status. These elements significantly influence their cognitive, emotional, and physiological health outcomes. We will conduct a longitudinal diary study in diverse urban and rural settings to capture daily fluctuations in older adults’ psychological and physiological health. This approach will provide valuable insights into their lived experiences over time. As part of a global consortium involving ten countries, our research will contribute to both local understanding and international knowledge. By revealing the connections between societal factors and health, we aim to inform targeted interventions that enhance the quality of life for older adults.
+                In this innovative project, we will explore the pathways that shape older adults' views on aging, focusing on critical factors such as healthcare access, health insurance, digital services, health infrastructure, social welfare schemes, pensions, family support, and socio-economic status. These elements significantly influence their cognitive, emotional, and physiological health outcomes. We will conduct a longitudinal diary study in diverse urban and rural settings to capture daily fluctuations in older adults’ psychological and physiological health. This approach will provide valuable insights into their lived experiences over time. As part of a global consortium involving ten countries, our research will contribute to both local understanding and international knowledge. By revealing the connections between societal factors and health, we aim to inform targeted interventions that enhance the quality of life for older adults.
               </p>
 
               {/* Rationale */}
               <div className="bg-green-50 p-6 rounded-xl shadow-inner text-[#1e1e1e]">
                 <h3 className="text-2xl md:text-xl font-semibold text-green-900 mb-3">Rationale:</h3>
                 <p className="text-green-900 text-lg leading-relaxed">
-                  India is undergoing a significant demographic shift, with older adults currently comprising 10.5% of the population, projected to rise to 20.8% by 2050. This rapid increase presents urgent challenges, as the quality of life and access to healthcare for older adults remain critically low in urban and rural areas. Age discrimination is a serious concern, being the most frequently reported form of discrimination among older individuals, surpassing caste and gender biases. This pervasive issue creates barriers to essential services and exacerbates health disparities. To address these challenges, our project will investigate the social and structural factors influencing the health and well-being of older adults. By uncovering the elements affecting their quality of life, we aim to provide insights that inform targeted interventions, fostering a more equitable society that respects and uplifts its ageing population.
+                  India is undergoing a significant demographic shift, with older adults currently comprising 10.5% of the population, projected to rise to 20.8% by 2050. This rapid increase presents urgent challenges, as the quality of life and access to healthcare for older adults remain critically low in urban and rural areas. Age discrimination is a serious concern, being the most frequently reported form of discrimination among older individuals, surpassing caste and gender biases. This pervasive issue creates barriers to essential services and exacerbates health disparities. To address these challenges, our project will investigate the social and structural factors influencing the health and well-being of older adults. By uncovering the elements affecting their quality of life, we aim to provide insights that inform targeted interventions, fostering a more equitable society that respects and uplifts its aging population.
                 </p>
               </div>
             </div>

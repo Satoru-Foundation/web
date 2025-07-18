@@ -17,29 +17,44 @@ const SliderComponent = ({ testimonials }) => {
 
   const sliderSettings = {
     dots: true,
-    infinite: true,
+    infinite: testimonials.length > 1,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: testimonials.length > 1,
     autoplaySpeed: 5000,
   };
 
+  // Remove duplicate testimonials by id
+  const uniqueTestimonials = testimonials.filter((t, idx, arr) =>
+    arr.findIndex(tt => tt.id === t.id) === idx
+  );
+
+  console.log('Testimonials:', testimonials);
+
   return (
     <Slider {...sliderSettings}>
-      {testimonials.map((t, idx) => (
-        <div key={idx} className="bg-[#f7f7f7] p-8 rounded-lg shadow-md">
+      {uniqueTestimonials.map((t, idx) => (
+        <div key={t.id || idx} className="bg-[#f7f7f7] p-8 rounded-lg shadow-md">
           {/* Top: Photo + Info row */}
           <div className="flex items-center gap-4 mb-4">
             {t.image && (
-              <div className="w-20 h-20 md:w-24 md:h-24 relative rounded-full overflow-hidden border-4 border-[#5e6f47]">
+              t.image.startsWith('data:') ? (
+                <img
+                  src={t.image}
+                  alt={t.name || 'Testimonial'}
+                  className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover border-4 border-[#5e6f47]"
+                  onError={e => { e.target.style.display = 'none'; }}
+                />
+              ) : (
                 <Image
                   src={t.image}
-                  alt={t.name}
+                  alt={t.name || 'Testimonial'}
                   layout="fill"
                   objectFit="cover"
+                  unoptimized={true}
                 />
-              </div>
+              )
             )}
             <div>
               <h4 className="font-bold text-[#5e6f47]">{t.name}</h4>

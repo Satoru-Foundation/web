@@ -49,7 +49,7 @@ export default function OurWorkPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-[#fdf8f2]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <p className="text-lg text-gray-600 max-w-9xl mx-auto mb-6">

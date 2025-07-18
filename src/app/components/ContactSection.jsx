@@ -18,6 +18,8 @@ export default function ContactSection() {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
 
+// Send from contact@satorufoundation.org and to info@satorufoundation.org and also the user's email which has been entered in the form
+// 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
@@ -25,46 +27,45 @@ export default function ContactSection() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     setLoading(true);
     setError('');
     setSuccess(false);
-
+  
     try {
-      // Send main email (message to your team)
-      await emailjs.send(
-        'service_cgyzmgk',  // Replace with your EmailJS service ID
-        'template_cr6a4gd', // Replace with your EmailJS template ID
-        formData,           // The form data (or parameters)
-        '3mSQ7mJuhKShRhrOG'      // Replace with your EmailJS user ID
-      );
-
-      // Send auto-reply to the user
-      await emailjs.send(
-        'service_cgyzmgk',  // Same service ID
-        'template_fpf5o98', // Replace with your auto-reply template ID
-        {
-          to_email: formData.email,  // The user's email
-          name: formData.name,
-          subject: formData.subject,
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        '3mSQ7mJuhKShRhrOG'      // Replace with your EmailJS user ID
-      );
-
-      setSuccess(true);
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to: 'info@satorufoundation.org', // Change this to your desired recipient
+        }),
       });
+  
+      const result = await response.json();
+  
+      if (response.ok) {
+        setSuccess(true);
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+        });
+      } else {
+        setError(result.error || 'Failed to send message. Please try again later.');
+      }
     } catch (err) {
       setError('Failed to send message. Please try again later.');
     } finally {
       setLoading(false);
     }
   };
-
   return (
     <section className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4 animate-fade-slide-up">
