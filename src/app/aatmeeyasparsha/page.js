@@ -87,7 +87,7 @@ export default function MeeNesthamContent() {
       <div className="font-sans text-gray-800">
       {/* Did You Know Section */}
       <section className="py-8 px-4 bg-gray-100">
-        <div className="bg-white rounded-lg p-6 max-w-4xl mx-auto shadow-sm">
+        <div className="bg-white rounded-lg p-6 max-w-4xl mx-auto shadow-sm text-center">
           {/* <h2 className="text-2xl font-semibold text-[#5e6f47] flex items-center mb-4">
             <TrendingUp className="mr-2 h-5 w-5" /> Did You Know?
           </h2> */}
@@ -96,8 +96,7 @@ export default function MeeNesthamContent() {
             gap through meaningful connections.
           </p>
           <p className="text-lg">
-            <span className="font-bold text-[#5e6f47]">3X</span> increase in emotional well-being and{" "}
-            <span className="font-bold text-[#5e6f47]">25%</span> improvement in mobility seen after 12 weeks with Aatmeeya Sparsha
+            Increase in emotional well-being and improvement in mobility seen after Aatmeeya Sparsha
           </p>
         </div>
       </section>
@@ -168,7 +167,7 @@ export default function MeeNesthamContent() {
         </h2>
 
         <ul className="list-disc pl-6">
-          <li className="mb-3 leading-relaxed">Scientifically structured 12-week protocol with measurable outcomes</li>
+          <li className="mb-3 leading-relaxed">Scientifically structured protocol with measurable outcomes</li>
           <li className="mb-3 leading-relaxed">
             Staff(Aatmeeyulu) trained in elder psychology, mobility support, and empathy
           </li>

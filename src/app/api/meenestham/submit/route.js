@@ -47,10 +47,10 @@ export async function POST(request) {
     const organizationEmail = {
       from: process.env.SMTP_FROM || email,
       to: 'info@satorufoundation.org',
-      subject: `Mee Nestham Visit Request: ${name}`,
+      subject: `Aatmeeya Sparsha Visit Request: ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #5e6f47;">New Mee Nestham Visit Request</h2>
+          <h2 style="color: #5e6f47;">New Aatmeeya Sparsha Visit Request</h2>
           <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px;">
             <p><strong>Name:</strong> ${name}</p>
             <p><strong>Email:</strong> ${email}</p>
@@ -68,7 +68,7 @@ export async function POST(request) {
             </div>` : ''}
           </div>
           <p style="color: #666; font-size: 12px; margin-top: 20px;">
-            This email was sent via the Mee Nestham request form on the Satoru Foundation website.
+            This email was sent via the Aatmeeya Sparsha request form on the Satoru Foundation website.
           </p>
         </div>
       `,
@@ -79,12 +79,12 @@ export async function POST(request) {
     const autoReplyEmail = {
       from: process.env.SMTP_FROM || 'info@satorufoundation.org',
       to: email,
-      subject: 'Thank you for your Mee Nestham request - Satoru Foundation',
+      subject: 'Thank you for your Aatmeeya Sparsha request - Satoru Foundation',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #5e6f47;">Thank You for Reaching Out!</h2>
           <p>Dear ${name},</p>
-          <p>Thank you for requesting a free Mee Nestham visit. We have received your details and will contact you within 24–48 hours.</p>
+          <p>Thank you for requesting a free Aatmeeya Sparsha visit. We have received your details and will contact you within 24–48 hours.</p>
           
           <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <h3 style="color: #5e6f47; margin-top: 0;">Your Submission Summary:</h3>
