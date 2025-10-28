@@ -65,7 +65,7 @@ Satoru Foundation offers structured internship opportunities designed to provide
 </p>
             <p className="mb-2 font-semibold">Duration and Work Schedule</p>
             <ul className="list-disc pl-6 mb-4">
-              <li>Internships range from 3 to 6 months, with a mandatory commitment of 3 months</li>
+              <li>Internships range from 3 to 6 months, with a mandatory commitment of 3 months (includes 1 month probationary period)</li>
               <li>Standard work week of 25-40 hours depending on the position and educational requirements</li>
               <li>Work schedule Monday through Saturday, with occasional weekend activities as needed</li>
               <li>Flexible working arrangements may be considered based on project requirements and intern's educational commitments</li>
